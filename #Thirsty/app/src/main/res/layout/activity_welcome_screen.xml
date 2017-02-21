@@ -12,7 +12,7 @@
     tools:context="com.example.user.thirsty.WelcomeScreen">
 
     <Button
-        android:text="Login"
+        android:text="@string/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -23,7 +23,7 @@
         android:onClick="onButtonClick" />
 
     <Button
-        android:text="Register"
+        android:text="@string/register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/login_button"

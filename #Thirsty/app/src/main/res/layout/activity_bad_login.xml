@@ -11,7 +11,7 @@
     tools:context="com.example.user.thirsty.bad_login">
 
     <TextView
-        android:text="You have entered an incorrect username or password"
+        android:text="@string/incorrect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -19,7 +19,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
     <TextView
-        android:text="Please try again or register"
+        android:text="@string/try_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
@@ -29,7 +29,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Try Again"
+        android:text="@string/try_again"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView4"
@@ -40,7 +40,7 @@
         android:onClick="onButtonClick" />
 
     <Button
-        android:text="Register"
+        android:text="@string/register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/try_again"
