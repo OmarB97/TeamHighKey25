@@ -7,8 +7,11 @@ import android.view.View;
 
 public class WelcomeScreen extends AppCompatActivity {
 
+    public static userDataBase users = new userDataBase();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
     }
