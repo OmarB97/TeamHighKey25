@@ -19,7 +19,8 @@ public class bad_login extends AppCompatActivity {
             startActivity(i);
         }
         if (view.getId() == R.id.register_button) {
-            //Do nothing : )
+            Intent i = new Intent(bad_login.this, registration_screen1.class);
+            startActivity(i);
         }
     }
 }

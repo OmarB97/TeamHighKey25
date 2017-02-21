@@ -18,9 +18,9 @@ public class WelcomeScreen extends AppCompatActivity {
             Intent i = new Intent(WelcomeScreen.this, Login.class);
             startActivity(i);
         }
-
-        if (view.getId() == R.id.button2) {
-            //Do nothing : )
+        if (view.getId() == R.id.button) {
+            Intent i = new Intent(WelcomeScreen.this, registration_screen1.class);
+            startActivity(i);
         }
     }
 
