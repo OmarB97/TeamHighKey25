@@ -14,6 +14,12 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
+    /* When the user clicks on the login button, onButtonClick
+    ** checks for correct user & password combination and if
+    ** so, the screen changes to the welcome screen.
+    **
+    ** @param view Login Screen View object*
+     */
     public void onButtonClick(View view) {
         if (view.getId() == R.id.button3) {
 
