@@ -8,14 +8,29 @@ import java.util.HashMap;
 
 public class userDataBase {
 
-    private static HashMap<String, String> userDataBase;
+    private static HashMap<String, Object> userDataBase;
+    //private static UserProfile profile;
 
     public userDataBase() {
-        userDataBase = new HashMap<String, String>();
+        userDataBase = new HashMap<String, Object>();
     }
 
-    public static void createUser(String username, String password) {
-        userDataBase.put(username, password);
+    public static void createUser(String username, String password, String email, String userType) {
+
+        UserProfile profile;
+
+        if (userType.equals("User")) {
+            profile = new User(email, password, userType);
+        } else if (userType.equals("Worker")) {
+            profile = new User(email, password, userType);
+        } else if (userType.equals("Manager")) {
+            profile = new User(email, password, userType);
+        } else {
+            profile = new Admin(email, password, userType);
+        }
+
+
+        userDataBase.put(username, profile);
     }
 
     public static boolean getUser(String username) {
@@ -27,11 +42,19 @@ public class userDataBase {
     }
 
     public static boolean getPassword(String username, String password) {
-        if (password.equals(userDataBase.get(username))) {
+        if (password.equals(((UserProfile) userDataBase.get(username)).getPassword())) {
             return true;
         } else {
             return false;
         }
+    }
+
+    public static String getInfo(String username) {
+        return "Your email is currently set as "
+                + ((UserProfile) userDataBase.get(username)).getEmail()
+                + " and your user type is "
+                + ((UserProfile) userDataBase.get(username)).getUserType() + ".";
+
     }
 
 }

@@ -18,7 +18,9 @@
         <activity android:name=".Login" />
         <activity android:name=".successful_login" />
         <activity android:name=".bad_login" />
-        <activity android:name=".registration_screen1"></activity>
+        <activity android:name=".registration_screen1" />
+        <activity android:name=".update_password" />
+        <activity android:name=".update_email"></activity>
     </application>
 
 </manifest>

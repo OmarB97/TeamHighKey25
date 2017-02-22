@@ -35,4 +35,32 @@
         android:layout_marginBottom="15dp"
         android:id="@+id/logout"
         android:onClick="onButtonClick" />
+
+    <Button
+        android:text="Edit Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_password"
+        android:layout_alignTop="@+id/update_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:text="Edit Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/update_email"
+        android:onClick="onButtonClick"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/logout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/update_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="53dp"
+        android:id="@+id/user_info"
+        android:text="@string/userInfo" />
 </RelativeLayout>

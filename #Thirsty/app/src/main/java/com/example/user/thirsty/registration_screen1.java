@@ -4,15 +4,27 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class registration_screen1 extends AppCompatActivity {
+    public List<String> legalRoles = Arrays.asList("User", "Worker", "Manager", "Admin");
+    private Spinner roleSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_screen1);
+        roleSpinner = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, legalRoles);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        roleSpinner.setAdapter(adapter);
+
     }
 
     public void onButtonClick(View view) {
@@ -28,6 +40,8 @@ public class registration_screen1 extends AppCompatActivity {
 
             EditText confirmPassPrep = (EditText) findViewById(R.id.confirmpass_TF);
             String confirmPass = confirmPassPrep.getText().toString();
+
+            String userType = (String) roleSpinner.getSelectedItem();
 
             if (user.length() < 1) {
                 Toast usernamePopUp = Toast.makeText(registration_screen1.this,
@@ -52,7 +66,7 @@ public class registration_screen1 extends AppCompatActivity {
                                 "This user already exists", Toast.LENGTH_SHORT);
                         existsPopUp.show();
                     } else {
-                        WelcomeScreen.users.createUser(user, pass);
+                        WelcomeScreen.users.createUser(user, pass, email, userType);
                         Toast accountCreated = Toast.makeText(registration_screen1.this,
                                 "Account successfully created!", Toast.LENGTH_SHORT);
                         accountCreated.show();

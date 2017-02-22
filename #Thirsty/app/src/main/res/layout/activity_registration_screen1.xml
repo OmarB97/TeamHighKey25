@@ -87,15 +87,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:text="Register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/register_button1"
-        android:onClick="onButtonClick"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/textview12" />
-
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -113,4 +104,13 @@
         android:layout_below="@+id/confirmpass_TF"
         android:layout_alignStart="@+id/confirmpass_TF"
         android:layout_marginTop="12dp" />
+
+    <Button
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/register_button1"
+        android:onClick="onButtonClick"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

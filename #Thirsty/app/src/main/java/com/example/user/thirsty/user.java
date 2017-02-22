@@ -4,14 +4,15 @@ package com.example.user.thirsty;
  * Created by USER on 2/21/2017.
  */
 
-public class user {
+public class User extends UserProfile{
     private String password;
     private String email;
-    private final String USER_TYPE = "user";
+    private String userType;
 
-    public user(String email, String password) {
+    public User(String email, String password, String userType) {
         this.password = password;
         this.email = email;
+        this.userType = userType;
     }
 
     public String getPassword() {
@@ -22,11 +23,19 @@ public class user {
         return email;
     }
 
+    public String getUserType() {
+        return userType;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 }

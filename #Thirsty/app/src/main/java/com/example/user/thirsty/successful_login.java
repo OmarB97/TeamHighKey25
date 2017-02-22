@@ -16,6 +16,10 @@ public class successful_login extends AppCompatActivity {
 
         TextView displayUser = (TextView) findViewById(R.id.TVusername);
         displayUser.setText(username);
+
+        String userInfo = WelcomeScreen.users.getInfo(username.substring(1));
+        TextView displayInfo = (TextView) findViewById(R.id.user_info);
+        displayInfo.setText(userInfo);
     }
 
     public void onButtonClick(View view) {
