@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6386e85b-729f-450e-a498-ae1dac399869" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/Admin.java" afterPath="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/Admin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/update_email.java" afterPath="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/update_email.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/user.java" afterPath="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/user.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/userDataBase.java" afterPath="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/userDataBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
     </list>
     <ignored path="TeamHighKey25.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +27,18 @@
       <file leaf-file-name="Admin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/Admin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="69" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
+            <state relative-caret-position="592">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="74" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/user.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="952">
+              <caret line="72" column="67" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -56,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userDataBase.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userDataBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/userDataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+            <state relative-caret-position="677">
+              <caret line="108" column="88" selection-start-line="108" selection-start-column="88" selection-end-line="108" selection-end-column="88" />
               <folding>
                 <element signature="method#createUser#0;class#userDataBase#0" expanded="false" />
                 <element signature="method#getUser#0;class#userDataBase#0" expanded="false" />
@@ -69,16 +77,6 @@
                 <element signature="method#setEmail#0;class#userDataBase#0" expanded="false" />
                 <element signature="method#setPassword#0;class#userDataBase#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/user.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -99,6 +97,7 @@
         <option value="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/Admin.java" />
         <option value="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/update_email.java" />
         <option value="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/userDataBase.java" />
+        <option value="$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/user.java" />
       </list>
     </option>
   </component>
@@ -632,39 +631,39 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/userDataBase.java</url>
-          <line>82</line>
-          <properties class="com.example.user.thirsty.userDataBase" method="setPassword" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/user.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="69" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/registration_screen1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/userDataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="108" column="88" selection-start-line="108" selection-start-column="88" selection-end-line="108" selection-end-column="88" />
+          <folding>
+            <element signature="method#createUser#0;class#userDataBase#0" expanded="false" />
+            <element signature="method#getUser#0;class#userDataBase#0" expanded="false" />
+            <element signature="method#getPassword#0;class#userDataBase#0" expanded="false" />
+            <element signature="method#getInfo#0;class#userDataBase#0" expanded="false" />
+            <element signature="method#setEmail#0;class#userDataBase#0" expanded="false" />
+            <element signature="method#setPassword#0;class#userDataBase#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -676,18 +675,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/userDataBase.java">
+    <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
-          <folding>
-            <element signature="method#createUser#0;class#userDataBase#0" expanded="false" />
-            <element signature="method#getUser#0;class#userDataBase#0" expanded="false" />
-            <element signature="method#getPassword#0;class#userDataBase#0" expanded="false" />
-            <element signature="method#getInfo#0;class#userDataBase#0" expanded="false" />
-            <element signature="method#setEmail#0;class#userDataBase#0" expanded="false" />
-            <element signature="method#setPassword#0;class#userDataBase#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="592">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="74" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/#Thirsty/app/src/main/java/com/example/user/thirsty/user.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="72" column="67" selection-start-line="72" selection-start-column="67" selection-end-line="72" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
