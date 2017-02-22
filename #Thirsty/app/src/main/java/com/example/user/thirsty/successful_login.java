@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * Created by Dennis Eddington on 2/21/2017.
+ * @author Dennis Eddington
+ */
+
 public class successful_login extends AppCompatActivity {
 
     @Override
@@ -22,6 +27,13 @@ public class successful_login extends AppCompatActivity {
         displayInfo.setText(userInfo);
     }
 
+
+    /**
+     * On button click, will check to see whether the use has requested to updating email, update password
+     * or log out. Will swap the view to the appropriate view based on user selection.
+     *
+     * @param view successful_login view
+     */
     public void onButtonClick(View view) {
         if (view.getId() == R.id.logout) {
             Intent i = new Intent(successful_login.this, WelcomeScreen.class);

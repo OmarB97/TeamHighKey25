@@ -1,8 +1,10 @@
 package com.example.user.thirsty;
 
 /**
- * Created by USER on 2/21/2017.
+ * Created by Dennis Eddington on 2/21/2017.
+ * @author Dennis Eddington
  */
+
 
 public class User extends UserProfile{
     private String password;

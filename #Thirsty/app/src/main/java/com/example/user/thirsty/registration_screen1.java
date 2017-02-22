@@ -12,6 +12,11 @@ import android.widget.Toast;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Created by Dennis Eddington on 2/21/2017.
+ * @author Dennis Eddington
+ */
+
 public class registration_screen1 extends AppCompatActivity {
     public List<String> legalRoles = Arrays.asList("User", "Worker", "Manager", "Admin");
     private Spinner roleSpinner;
@@ -27,6 +32,14 @@ public class registration_screen1 extends AppCompatActivity {
 
     }
 
+    /**
+     * On button click, will check all fields of the registration. Will look for common errors such
+     * as invalid email, empty username, empty password, and non matching passwords. Upon
+     * confirmation of all fields will record the new user in the userDataBase before sending the user
+     * back to the welcome_screen.
+     *
+     * @param view registration_screen1 view
+     */
     public void onButtonClick(View view) {
         if (view.getId() == R.id.register_button1) {
             EditText userPrep = (EditText) findViewById(R.id.username_TF);

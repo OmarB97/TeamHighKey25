@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+/**
+ * Created by Dennis Eddington on 2/21/2017.
+ * @author Dennis Eddington
+ */
+
 public class Login extends AppCompatActivity {
 
     @Override

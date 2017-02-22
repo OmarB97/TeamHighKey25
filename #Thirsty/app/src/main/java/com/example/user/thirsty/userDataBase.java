@@ -3,8 +3,10 @@ package com.example.user.thirsty;
 import java.util.HashMap;
 
 /**
- * Created by USER on 2/21/2017.
+ * Created by Dennis Eddington on 2/21/2017.
+ * @author Dennis Eddington
  */
+
 
 public class userDataBase {
 

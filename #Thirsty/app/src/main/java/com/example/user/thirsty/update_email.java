@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * Created by Dennis Eddington on 2/21/2017.
+ * @author Dennis Eddington
+ */
+
 public class update_email extends AppCompatActivity {
 
     @Override

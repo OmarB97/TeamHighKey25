@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * Created by Dennis Eddington on 2/21/2017.
+ * @author Dennis Eddington
+ */
+
 public class update_password extends AppCompatActivity {
 
     @Override
@@ -15,6 +20,13 @@ public class update_password extends AppCompatActivity {
         setContentView(R.layout.activity_update_password);
     }
 
+    /**
+     * On button click, will check to see if there was an password entered and if matches
+     * the confirmed password field. Upon confirmation of those two things will successfully
+     * change the email of the correct object.
+     *
+     * @param view update_password view
+     */
     public void onButtonClick(View view) {
         if (view.getId() == R.id.update_password) {
 
