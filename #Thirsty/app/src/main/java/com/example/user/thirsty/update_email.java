@@ -15,6 +15,13 @@ public class update_email extends AppCompatActivity {
         setContentView(R.layout.activity_update_email);
     }
 
+    /**
+     * On button click, will check to see if there was an email entered and if it was valid. Upon
+     * confirmation of those two things will successfully change the email of the correct object.
+     *
+     * @param view update_email view
+     */
+
     public void onButtonClick(View view) {
         if (view.getId() == R.id.update_email) {
             EditText emailPrep = (EditText) findViewById(R.id.new_email);

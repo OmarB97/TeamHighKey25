@@ -11,10 +11,22 @@ public class userDataBase {
     private static HashMap<String, Object> userDataBase;
     //private static UserProfile profile;
 
+    /**
+     * Constructer for user data base backed by a hashmap
+     */
     public userDataBase() {
         userDataBase = new HashMap<String, Object>();
     }
 
+    /**
+     * When called, will create a user in the user database by confirming information such as
+     * username, password, email, and user type.
+     *
+     * @param username the username for the User/Admin to be created
+     * @param password the password for the User/Admin to be created
+     * @param email the email for the User/Admin to be created
+     * @param userType the user type for the User/Admin to be created
+     */
     public static void createUser(String username, String password, String email, String userType) {
 
         UserProfile profile;
@@ -33,6 +45,13 @@ public class userDataBase {
         userDataBase.put(username, profile);
     }
 
+    /**
+     * Will return a boolean value confirming whether or not a username already exists within the
+     * database
+     * 
+     * @param username
+     * @return
+     */
     public static boolean getUser(String username) {
         if (userDataBase.containsKey(username)) {
             return true;
