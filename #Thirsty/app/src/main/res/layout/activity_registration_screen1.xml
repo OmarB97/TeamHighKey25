@@ -10,16 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.user.thirsty.registration_screen1">
 
-    <TextView
-        android:text="Username:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="46dp"
-        android:id="@+id/textView10" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,16 +49,6 @@
         android:layout_marginTop="15dp"
         android:id="@+id/confirmpass_TF" />
 
-    <Button
-        android:text="Register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/confirmpass_TF"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp"
-        android:id="@+id/register_button1"
-        android:onClick="onButtonClick" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -96,4 +76,41 @@
         android:layout_marginTop="15dp"
         android:layout_below="@+id/username_TF"
         android:layout_alignStart="@+id/username_TF" />
+
+    <TextView
+        android:text="Username:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:id="@+id/textView10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/register_button1"
+        android:onClick="onButtonClick"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/textview12" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_below="@+id/textView14"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:text="User Type:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView14"
+        android:layout_below="@+id/confirmpass_TF"
+        android:layout_alignStart="@+id/confirmpass_TF"
+        android:layout_marginTop="12dp" />
 </RelativeLayout>
