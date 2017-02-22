@@ -12,7 +12,7 @@ public class User extends UserProfile{
     private String userType;
     /**
      *Constructor for an user object. Takes in an email, a password, and a user type and assigns
-     * them to the object
+     * them to the object.
      *
      * @param email the email for the User object
      * @param password the password for the User object
