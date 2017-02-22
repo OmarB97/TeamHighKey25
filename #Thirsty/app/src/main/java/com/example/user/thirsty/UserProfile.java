@@ -9,5 +9,7 @@ public abstract class UserProfile {
     abstract String getPassword();
     abstract String getEmail();
     abstract String getUserType();
+    abstract void setPassword(String password);
+    abstract void setEmail(String email);
 
 }

@@ -27,5 +27,17 @@ public class successful_login extends AppCompatActivity {
             Intent i = new Intent(successful_login.this, WelcomeScreen.class);
             startActivity(i);
         }
+
+        if (view.getId() == R.id.edit_email) {
+            Intent i = new Intent(successful_login.this, update_email.class);
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+        }
+
+        if (view.getId() == R.id.edit_password) {
+            Intent i = new Intent(successful_login.this, update_password.class);
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+        }
     }
 }

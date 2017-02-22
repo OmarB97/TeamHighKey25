@@ -57,4 +57,12 @@ public class userDataBase {
 
     }
 
+    public static void setEmail(String username, String email) {
+        ((UserProfile) userDataBase.get(username)).setEmail(email);
+    }
+
+    public static void setPassword(String username, String password) {
+        ((UserProfile) userDataBase.get(username)).setPassword(password);
+    }
+
 }

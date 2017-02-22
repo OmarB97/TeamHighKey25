@@ -47,6 +47,14 @@ public class registration_screen1 extends AppCompatActivity {
                 Toast usernamePopUp = Toast.makeText(registration_screen1.this,
                         "Please enter a username", Toast.LENGTH_SHORT);
                 usernamePopUp.show();
+            } else if (!email.contains("@")) {
+                Toast emailPopUp = Toast.makeText(registration_screen1.this,
+                        "Please use a valid email", Toast.LENGTH_SHORT);
+                emailPopUp.show();
+            } else if (email.length() < 1) {
+                Toast emailPopUp = Toast.makeText(registration_screen1.this,
+                        "Please use a valid email", Toast.LENGTH_SHORT);
+                emailPopUp.show();
             } else if (pass.length() < 1) {
                 Toast passwordPopUp = Toast.makeText(registration_screen1.this,
                         "Please enter a password", Toast.LENGTH_SHORT);
