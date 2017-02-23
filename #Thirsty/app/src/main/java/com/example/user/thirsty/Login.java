@@ -9,6 +9,7 @@ import android.widget.EditText;
 /**
  * Created by Dennis Eddington on 2/21/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
 public class Login extends AppCompatActivity {
@@ -35,12 +36,12 @@ public class Login extends AppCompatActivity {
             String pass = passPrep.getText().toString();
 
             if (WelcomeScreen.users.getUser(user) && WelcomeScreen.users.getPassword(user, pass)) {
-                Intent i = new Intent(Login.this, successful_login.class);
+                Intent i = new Intent(Login.this, Successful_login.class);
                 user = " " + user;
                 i.putExtra("Username", user);
                 startActivity(i);
             } else {
-                Intent i = new Intent(Login.this, bad_login.class);
+                Intent i = new Intent(Login.this, Bad_login.class);
                 startActivity(i);
             }
 

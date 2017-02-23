@@ -5,10 +5,11 @@ import java.util.HashMap;
 /**
  * Created by Dennis Eddington on 2/21/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
 
-public class userDataBase {
+public class UserDataBase {
 
     private static HashMap<String, Object> userDataBase;
     //private static UserProfile profile;
@@ -16,7 +17,7 @@ public class userDataBase {
     /**
      * Constructer for user data base backed by a hashmap.
      */
-    public userDataBase() {
+    public UserDataBase() {
         userDataBase = new HashMap<String, Object>();
     }
 

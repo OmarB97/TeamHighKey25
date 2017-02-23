@@ -15,9 +15,10 @@ import java.util.List;
 /**
  * Created by Dennis Eddington on 2/21/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
-public class registration_screen1 extends AppCompatActivity {
+public class Registration_screen1 extends AppCompatActivity {
     public List<String> legalRoles = Arrays.asList("User", "Worker", "Manager", "Admin");
     private Spinner roleSpinner;
 
@@ -57,41 +58,41 @@ public class registration_screen1 extends AppCompatActivity {
             String userType = (String) roleSpinner.getSelectedItem();
 
             if (user.length() < 1) {
-                Toast usernamePopUp = Toast.makeText(registration_screen1.this,
+                Toast usernamePopUp = Toast.makeText(Registration_screen1.this,
                         "Please enter a username", Toast.LENGTH_SHORT);
                 usernamePopUp.show();
             } else if (!email.contains("@")) {
-                Toast emailPopUp = Toast.makeText(registration_screen1.this,
+                Toast emailPopUp = Toast.makeText(Registration_screen1.this,
                         "Please use a valid email", Toast.LENGTH_SHORT);
                 emailPopUp.show();
             } else if (email.length() < 1) {
-                Toast emailPopUp = Toast.makeText(registration_screen1.this,
+                Toast emailPopUp = Toast.makeText(Registration_screen1.this,
                         "Please use a valid email", Toast.LENGTH_SHORT);
                 emailPopUp.show();
             } else if (pass.length() < 1) {
-                Toast passwordPopUp = Toast.makeText(registration_screen1.this,
+                Toast passwordPopUp = Toast.makeText(Registration_screen1.this,
                         "Please enter a password", Toast.LENGTH_SHORT);
                 passwordPopUp.show();
             } else {
 
                 if (!pass.equals(confirmPass)) {
                     // This is Pop-Up Action Code
-                    Toast passPopUp = Toast.makeText(registration_screen1.this,
+                    Toast passPopUp = Toast.makeText(Registration_screen1.this,
                             "Passwords do not match", Toast.LENGTH_SHORT);
                     passPopUp.show();
                 }
 
                 if (pass.equals(confirmPass)) {
                     if (WelcomeScreen.users.getUser(user)) {
-                        Toast existsPopUp = Toast.makeText(registration_screen1.this,
+                        Toast existsPopUp = Toast.makeText(Registration_screen1.this,
                                 "This user already exists", Toast.LENGTH_SHORT);
                         existsPopUp.show();
                     } else {
                         WelcomeScreen.users.createUser(user, pass, email, userType);
-                        Toast accountCreated = Toast.makeText(registration_screen1.this,
+                        Toast accountCreated = Toast.makeText(Registration_screen1.this,
                                 "Account successfully created!", Toast.LENGTH_SHORT);
                         accountCreated.show();
-                        Intent i = new Intent(registration_screen1.this, WelcomeScreen.class);
+                        Intent i = new Intent(Registration_screen1.this, WelcomeScreen.class);
                         startActivity(i);
                     }
                 }

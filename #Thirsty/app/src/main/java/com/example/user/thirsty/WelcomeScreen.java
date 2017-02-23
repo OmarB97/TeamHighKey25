@@ -8,11 +8,12 @@ import android.view.View;
 /**
  * Created by Dennis Eddington on 2/21/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
 public class WelcomeScreen extends AppCompatActivity {
 
-    public static userDataBase users = new userDataBase();
+    public static UserDataBase users = new UserDataBase();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class WelcomeScreen extends AppCompatActivity {
             startActivity(i);
         }
         if (view.getId() == R.id.button) {
-            Intent i = new Intent(WelcomeScreen.this, registration_screen1.class);
+            Intent i = new Intent(WelcomeScreen.this, Registration_screen1.class);
             startActivity(i);
         }
     }

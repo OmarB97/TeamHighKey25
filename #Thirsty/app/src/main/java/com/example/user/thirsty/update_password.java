@@ -10,9 +10,10 @@ import android.widget.Toast;
 /**
  * Created by Dennis Eddington on 2/21/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
-public class update_password extends AppCompatActivity {
+public class Update_password extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,23 +42,23 @@ public class update_password extends AppCompatActivity {
 
 
             if (pass.length() < 1) {
-                Toast passwordPopUp = Toast.makeText(update_password.this,
+                Toast passwordPopUp = Toast.makeText(Update_password.this,
                         "Please enter a password", Toast.LENGTH_SHORT);
                 passwordPopUp.show();
             } else {
 
                 if (!pass.equals(confirmPass)) {
                     // This is Pop-Up Action Code
-                    Toast passPopUp = Toast.makeText(update_password.this,
+                    Toast passPopUp = Toast.makeText(Update_password.this,
                             "Passwords do not match", Toast.LENGTH_SHORT);
                     passPopUp.show();
                 }
 
                 if (pass.equals(confirmPass)) {
                     WelcomeScreen.users.setPassword(username, pass);
-                    Intent i = new Intent(update_password.this, successful_login.class);
+                    Intent i = new Intent(Update_password.this,Successful_login.class);
                     i.putExtra("Username", getIntent().getStringExtra("Username"));
-                    Toast passPopUp = Toast.makeText(update_password.this,
+                    Toast passPopUp = Toast.makeText(Update_password.this,
                             "Password successfully changed!", Toast.LENGTH_SHORT);
                     passPopUp.show();
                     startActivity(i);

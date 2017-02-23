@@ -9,9 +9,10 @@ import android.widget.TextView;
 /**
  * Created by Dennis Eddington on 2/21/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
-public class successful_login extends AppCompatActivity {
+public class Successful_login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,18 +37,18 @@ public class successful_login extends AppCompatActivity {
      */
     public void onButtonClick(View view) {
         if (view.getId() == R.id.logout) {
-            Intent i = new Intent(successful_login.this, WelcomeScreen.class);
+            Intent i = new Intent(Successful_login.this, WelcomeScreen.class);
             startActivity(i);
         }
 
         if (view.getId() == R.id.edit_email) {
-            Intent i = new Intent(successful_login.this, update_email.class);
+            Intent i = new Intent(Successful_login.this, Update_email.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
         }
 
         if (view.getId() == R.id.edit_password) {
-            Intent i = new Intent(successful_login.this, update_password.class);
+            Intent i = new Intent(Successful_login.this, Update_password.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
         }

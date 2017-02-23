@@ -3,6 +3,7 @@ package com.example.user.thirsty;
 /**
  * Created by Dennis Eddington on 2/21/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
 public class Admin extends UserProfile {

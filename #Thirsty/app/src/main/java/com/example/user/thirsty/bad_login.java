@@ -8,10 +8,11 @@ import android.view.View;
 /**
  * Created by Dennis Eddington on 2/21/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
 
-public class bad_login extends AppCompatActivity {
+public class Bad_login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +30,11 @@ public class bad_login extends AppCompatActivity {
 
     public void onButtonClick(View view) {
         if (view.getId() == R.id.try_again) {
-            Intent i = new Intent(bad_login.this, Login.class);
+            Intent i = new Intent(Bad_login.this, Login.class);
             startActivity(i);
         }
         if (view.getId() == R.id.register_button) {
-            Intent i = new Intent(bad_login.this, registration_screen1.class);
+            Intent i = new Intent(Bad_login.this, Registration_screen1.class);
             startActivity(i);
         }
     }
