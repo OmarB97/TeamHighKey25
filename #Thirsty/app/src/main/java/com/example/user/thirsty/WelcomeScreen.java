@@ -14,6 +14,7 @@ import android.view.View;
 public class WelcomeScreen extends AppCompatActivity {
 
     public static UserDataBase users = new UserDataBase();
+    public static WaterSourceReportList activeSourceReportList = new WaterSourceReportList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

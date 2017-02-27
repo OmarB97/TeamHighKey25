@@ -20,8 +20,10 @@
         <activity android:name=".Bad_login" />
         <activity android:name=".Registration_screen1" />
         <activity android:name=".Update_password" />
-        <activity android:name=".Update_email">
-        </activity>
+        <activity android:name=".Update_email" />
+        <activity android:name=".WelcomeScreenLoggedIn" />
+        <activity android:name=".SubmitWaterSourceReport" />
+        <activity android:name=".UserReportView"></activity>
     </application>
 
 </manifest>

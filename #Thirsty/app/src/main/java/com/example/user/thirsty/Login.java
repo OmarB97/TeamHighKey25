@@ -36,7 +36,7 @@ public class Login extends AppCompatActivity {
             String pass = passPrep.getText().toString();
 
             if (WelcomeScreen.users.getUser(user) && WelcomeScreen.users.getPassword(user, pass)) {
-                Intent i = new Intent(Login.this, Successful_login.class);
+                Intent i = new Intent(Login.this, WelcomeScreenLoggedIn.class);
                 user = " " + user;
                 i.putExtra("Username", user);
                 startActivity(i);
