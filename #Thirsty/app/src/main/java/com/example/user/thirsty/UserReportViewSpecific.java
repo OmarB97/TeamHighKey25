@@ -4,6 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+/**
+ * Created by Dennis Eddington on 2/27/2017.
+ * @author Dennis Eddington
+ */
+
 public class UserReportViewSpecific extends AppCompatActivity {
 
 

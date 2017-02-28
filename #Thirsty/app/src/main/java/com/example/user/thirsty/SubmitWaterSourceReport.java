@@ -12,6 +12,11 @@ import android.widget.Toast;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Created by Dennis Eddington on 2/27/2017.
+ * @author Dennis Eddington
+ */
+
 public class SubmitWaterSourceReport extends AppCompatActivity {
     public List<String> legalTypes = Arrays.asList("Bottled", "Well", "Stream", "Lake", "Spring", "Other");
     public List<String> legalConditions = Arrays.asList("Waste", "Treatable-Clear", "Treatable-Muddy", "Potable");
@@ -34,6 +39,12 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
         conditionSpinner.setAdapter(adapter2);
     }
 
+    /**
+     * Upon successful input of information will create a WaterSourceReport object containing that
+     * information to be stored into the WaterSourceReportList object.
+     *
+     * @param view submit_water_source_report view
+     */
     public void onButtonClick(View view) {
         if (view.getId() == R.id.submit) {
             EditText locationPrep = (EditText) findViewById(R.id.location_field);

@@ -9,6 +9,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * Created by Dennis Eddington on 2/27/2017.
+ * @author Dennis Eddington
+ */
+
 public class UserReportView extends AppCompatActivity {
 
     @Override
@@ -19,6 +24,9 @@ public class UserReportView extends AppCompatActivity {
         registerClick();
     }
 
+    /**
+     * Creates a dynamic list view that can be transversed by viewers if needed.
+     */
     private void updateListView() {
         Object[] list = WelcomeScreen.activeSourceReportList.printList();
         String[] writableList = new String[list.length];
@@ -36,6 +44,10 @@ public class UserReportView extends AppCompatActivity {
         listed.setAdapter(adapter);
     }
 
+    /**
+     * Registers clicks on the list view in order for users to review information submitted by
+     * other users.
+     */
     private void registerClick() {
         ListView list = (ListView) findViewById(R.id.list_view);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
