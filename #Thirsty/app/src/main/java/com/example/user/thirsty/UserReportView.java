@@ -1,5 +1,6 @@
 package com.example.user.thirsty;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -39,7 +40,9 @@ public class UserReportView extends AppCompatActivity {
         ListView list = (ListView) findViewById(R.id.list_view);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
-                TextView textView = (TextView) viewClicked;
+                Intent i = new Intent(UserReportView.this, UserReportViewSpecific.class);
+                i.putExtra("RepNumber", position);
+                startActivity(i);
             }
         });
     }

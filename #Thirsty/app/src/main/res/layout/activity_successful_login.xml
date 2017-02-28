@@ -26,35 +26,6 @@
         android:layout_toEndOf="@+id/textView3"
         android:id="@+id/TVusername" />
 
-    <Button
-        android:text="@string/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
-        android:id="@+id/logout"
-        android:onClick="onButtonClick" />
-
-    <Button
-        android:text="Edit Password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_password"
-        android:layout_alignTop="@+id/edit_email"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
-        android:onClick="onButtonClick" />
-
-    <Button
-        android:text="Edit Email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_email"
-        android:onClick="onButtonClick"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/logout" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,4 +34,43 @@
         android:layout_marginBottom="53dp"
         android:id="@+id/user_info"
         android:text="@string/userInfo" />
+
+    <Button
+        android:text="Edit Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_email"
+        android:onClick="onButtonClick"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Edit Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_password"
+        android:onClick="onButtonClick"
+        android:layout_below="@+id/edit_email"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/return_home"
+        android:layout_alignBaseline="@+id/logout"
+        android:layout_alignBottom="@+id/logout"
+        android:layout_toEndOf="@+id/TVusername"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:text="@string/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/logout"
+        android:onClick="onButtonClick"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/user_info"
+        android:layout_marginStart="20dp" />
 </RelativeLayout>

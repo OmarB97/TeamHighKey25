@@ -23,7 +23,8 @@
         <activity android:name=".Update_email" />
         <activity android:name=".WelcomeScreenLoggedIn" />
         <activity android:name=".SubmitWaterSourceReport" />
-        <activity android:name=".UserReportView"></activity>
+        <activity android:name=".UserReportView" />
+        <activity android:name=".UserReportViewSpecific"></activity>
     </application>
 
 </manifest>

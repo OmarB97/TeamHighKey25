@@ -52,5 +52,11 @@ public class Successful_login extends AppCompatActivity {
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
         }
+
+        if (view.getId() == R.id.return_home) {
+            Intent i = new Intent(Successful_login.this, WelcomeScreenLoggedIn.class);
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+        }
     }
 }

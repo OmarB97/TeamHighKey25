@@ -28,4 +28,8 @@ public class WaterSourceReportList {
     public static Object[] printList() {
         return sourceReportList.toArray();
     }
+
+    public static WaterSourceReport getReport(int index) {
+        return sourceReportList.get(index);
+    }
 }
