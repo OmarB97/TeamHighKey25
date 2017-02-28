@@ -37,7 +37,7 @@ public class WaterSourceReportList {
 
 
     /**
-     * Returns the size of the arraylist.
+     * Returns the size of the respective arraylist.
      *
      * @return the size of the arraylist
      */
