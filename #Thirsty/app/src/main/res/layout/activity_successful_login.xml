@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.user.thirsty.successful_login">
+    tools:context="com.example.user.thirsty.Successful_login">
 
     <TextView
         android:text="@string/welcome"
@@ -54,23 +54,21 @@
         android:layout_centerHorizontal="true" />
 
     <Button
+        android:text="logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout"
+        android:onClick="onButtonClick"
+        android:visibility="visible"
+        android:layout_below="@+id/return_home"
+        android:layout_centerHorizontal="true" />
+
+    <Button
         android:text="Home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/return_home"
-        android:layout_alignBaseline="@+id/logout"
-        android:layout_alignBottom="@+id/logout"
-        android:layout_toEndOf="@+id/TVusername"
-        android:onClick="onButtonClick" />
-
-    <Button
-        android:text="@string/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:id="@+id/logout"
         android:onClick="onButtonClick"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/user_info"
-        android:layout_marginStart="20dp" />
+        android:layout_below="@+id/edit_password"
+        android:layout_alignStart="@+id/logout" />
 </RelativeLayout>
