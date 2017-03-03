@@ -34,7 +34,7 @@ public class UserDataBase {
 
         UserProfile profile;
 
-        password = MD5(password);
+/*        password = MD5(password);*/
 
         if (userType.equals("User")) {
             profile = new User(email, password, userType);
