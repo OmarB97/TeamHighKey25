@@ -8,6 +8,7 @@ import android.view.View;
 /**
  * Created by Dennis Eddington on 2/27/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
 public class WelcomeScreenLoggedIn extends AppCompatActivity {
@@ -42,7 +43,7 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
         }
 
         if (view.getId() == R.id.view_report) {
-            Intent i = new Intent(WelcomeScreenLoggedIn.this, UserReportView.class);
+            Intent i = new Intent(WelcomeScreenLoggedIn.this, MapsActivity.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
         }
