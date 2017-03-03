@@ -3,6 +3,7 @@ package com.example.user.thirsty;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -34,6 +35,9 @@ public class Login extends AppCompatActivity {
 
             EditText passPrep = (EditText) findViewById(R.id.TFPassword);
             String pass = passPrep.getText().toString();
+
+            pass = UserDataBase.MD5(pass);
+            
 
             if (WelcomeScreen.users.getUser(user) && WelcomeScreen.users.getPassword(user, pass)) {
                 Intent i = new Intent(Login.this, WelcomeScreenLoggedIn.class);
