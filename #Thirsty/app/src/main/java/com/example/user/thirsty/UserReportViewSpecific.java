@@ -7,6 +7,7 @@ import android.widget.TextView;
 /**
  * Created by Dennis Eddington on 2/27/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
 public class UserReportViewSpecific extends AppCompatActivity {
@@ -23,8 +24,13 @@ public class UserReportViewSpecific extends AppCompatActivity {
         TextView displayTitle = (TextView) findViewById(R.id.generated_title);
         displayTitle.setText((reportNum + 1) + " created by " + currentReport.getReporter());
 
-        TextView displayLocation = (TextView) findViewById(R.id.location);
-        displayLocation.setText(currentReport.getLocation());
+        TextView displayLocation = (TextView) findViewById(R.id.longitude_field);
+        String longitude = Float.toString(currentReport.getLongitude());
+        displayLocation.setText(longitude);
+
+        TextView displayLatitude = (TextView) findViewById(R.id.latitude_field);
+        String latitude = Float.toString(currentReport.getLatitude());
+        displayLocation.setText(latitude);
 
         TextView displayWaterType = (TextView) findViewById(R.id.water_type);
         displayWaterType.setText(currentReport.getWaterType());

@@ -47,16 +47,20 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
      */
     public void onButtonClick(View view) {
         if (view.getId() == R.id.submit) {
-            EditText locationPrep = (EditText) findViewById(R.id.location_field);
-            String location = locationPrep.getText().toString();
+            EditText latitudePrep = (EditText) findViewById(R.id.latitude_field);
+            EditText longitudePrep = (EditText) findViewById(R.id.longitude_field);
+            String latitude = latitudePrep.getText().toString();
+            String longitude = longitudePrep.getText().toString();
+            float lat = Float.parseFloat(latitude);
+            float longi = Float.parseFloat(longitude);
 
             String user = getIntent().getStringExtra("Username");
 
             String waterType = (String) typeSpinner.getSelectedItem();
             String waterCondition = (String) conditionSpinner.getSelectedItem();
 
-            if (location.length() > 0 ) {
-                WelcomeScreen.activeSourceReportList.addReport(new WaterSourceReport(location, waterType, waterCondition, user.substring(1)));
+            if (latitude.length() > 0 ) {
+                WelcomeScreen.activeSourceReportList.addReport(new WaterSourceReport(lat, longi, waterType, waterCondition, user.substring(1)));
                 Toast reportCreated = Toast.makeText(SubmitWaterSourceReport.this,
                         "Report successfully created!", Toast.LENGTH_SHORT);
                 reportCreated.show();

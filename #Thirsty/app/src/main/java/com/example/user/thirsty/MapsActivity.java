@@ -7,12 +7,23 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap.OnCameraIdleListener;
+import com.google.android.gms.maps.GoogleMap.OnCameraMoveCanceledListener;
+import com.google.android.gms.maps.GoogleMap.OnCameraMoveListener;
+import com.google.android.gms.maps.GoogleMap.OnCameraMoveStartedListener;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    public static final CameraPosition ATLANTA = new CameraPosition.Builder().target(new LatLng(33.4, -84.2))
+            .zoom(5.5f)
+            .bearing(0)
+            .tilt(50)
+            .build();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +48,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        LatLng atlanta = new LatLng(33, -84);
+        mMap.addMarker(new MarkerOptions().position(atlanta).title("Marker in Atlanta"));
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(ATLANTA));
+        Object[] list = WelcomeScreen.activeSourceReportList.printList();
+        for (int i = 0; i < list.length; i++) {
+            WaterSourceReport report = (WaterSourceReport) list[i];
+            String entry;
+            entry = "Location: (" + report.getLatitude() + ", " + report.getLongitude() + "). Type: "
+                    + report.getWaterType() +  ". Condition: " +report.getWaterCondition();
+            LatLng location = new LatLng(report.getLatitude(), report.getLongitude());
+            mMap.addMarker(new MarkerOptions().position(location).title(entry));
+        }
     }
 }

@@ -5,12 +5,14 @@ import java.util.Date;
 /**
  * Created by Dennis Eddington on 2/27/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
 public class WaterSourceReport {
     private int reportNumber;
     private Date currentDate;
-    private String location;
+    private float longitude;
+    private float latitude;
     private String waterType;
     private String waterCondition;
     private String reporter;
@@ -18,14 +20,16 @@ public class WaterSourceReport {
     /**
      * Creates a WaterSourceReport to be inputted in the WaterSourceReportList.
      *
-     * @param location the location of the water source
+     * @param longitude the longitude of the water source
+     * @param latitude the latitude of the water source
      * @param waterType the type of water found
      * @param waterCondition the condition of the water found
      * @param username the user that submitted the information
      */
-    public WaterSourceReport(String location, String waterType, String waterCondition,
+    public WaterSourceReport(float latitude, float longitude, String waterType, String waterCondition,
                              String username) {
-        this.location = location;
+        this.longitude = longitude;
+        this.latitude = latitude;
         this.waterType = waterType;
         this.waterCondition = waterCondition;
         this.currentDate = new Date();
@@ -43,13 +47,23 @@ public class WaterSourceReport {
     }
 
     /**
-     * Will return the location that the WaterSourceReport was found at.
+     * Will return the longitude that the WaterSourceReport was found at.
      *
-     * @return location of the water
+     * @return longitude of the water
      */
-    public String getLocation() {
-        return location;
+    public Float getLongitude() {
+        return longitude;
     }
+
+    /**
+     * Will return the latitude that the WaterSourceReport was found at.
+     *
+     * @return longitude of the water
+     */
+    public Float getLatitude() {
+        return latitude;
+    }
+
 
     /**
      * Will return the type of water WaterSourceReport contains.

@@ -21,56 +21,77 @@
         android:onClick="onButtonClick" />
 
     <TextView
-        android:text="Location:"
+        android:text="Latitude:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:id="@+id/textView7"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="24dp"
-        android:id="@+id/textView7" />
+        android:layout_alignParentStart="true" />
 
     <EditText
+        android:id="@+id/latitude_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/location_field"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView7"
-        android:layout_alignStart="@+id/textView7"
-        android:layout_marginTop="14dp" />
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal" />
+
+
 
     <TextView
         android:text="Water Type:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/location_field"
-        android:layout_alignStart="@+id/location_field"
-        android:layout_marginTop="14dp"
-        android:id="@+id/textView8" />
+        android:id="@+id/textView8"
+        android:layout_marginBottom="24dp"
+        android:layout_alignBottom="@+id/typeSpinner"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView8"
-        android:layout_alignStart="@+id/textView8"
-        android:layout_marginTop="12dp"
-        android:id="@+id/typeSpinner" />
+        android:id="@+id/typeSpinner"
+        android:layout_above="@+id/textView9"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp" />
 
     <TextView
         android:text="Water Condition:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:id="@+id/textView9"
-        android:layout_below="@+id/typeSpinner"
-        android:layout_alignStart="@+id/typeSpinner" />
+        android:layout_above="@+id/conditionSpinner"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/conditionSpinner"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/textView9"
-        android:layout_alignStart="@+id/textView9" />
+        android:layout_above="@+id/submit"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="22dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Longitude"
+        android:layout_below="@+id/latitude_field"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/longitude_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/latitude_field"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal" />
+
+
 </RelativeLayout>

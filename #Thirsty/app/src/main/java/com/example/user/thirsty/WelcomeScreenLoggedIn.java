@@ -43,6 +43,12 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
         }
 
         if (view.getId() == R.id.view_report) {
+            Intent i = new Intent(WelcomeScreenLoggedIn.this, UserReportView.class);
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+        }
+
+        if (view.getId() == R.id.view_map) {
             Intent i = new Intent(WelcomeScreenLoggedIn.this, MapsActivity.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);

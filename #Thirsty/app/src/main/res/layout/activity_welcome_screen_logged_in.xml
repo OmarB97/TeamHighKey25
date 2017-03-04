@@ -45,7 +45,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/view_report"
+        android:onClick="onButtonClick"
         android:layout_below="@+id/submit_report"
-        android:layout_centerHorizontal="true"
-        android:onClick="onButtonClick" />
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginStart="24dp" />
+
+    <Button
+        android:id="@+id/view_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/viewMap"
+        android:layout_alignBaseline="@+id/view_report"
+        android:layout_alignBottom="@+id/view_report"
+        android:onClick="onButtonClick"
+        android:layout_toEndOf="@+id/view_report" />
 </RelativeLayout>
