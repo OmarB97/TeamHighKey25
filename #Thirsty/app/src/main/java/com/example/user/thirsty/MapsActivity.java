@@ -56,7 +56,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         for (int i = 0; i < list.length; i++) {
             WaterSourceReport report = (WaterSourceReport) list[i];
             String entry;
-            entry = "Location: (" + report.getLatitude() + ", " + report.getLongitude() + "). Water: "
+            entry = "Location:(" + report.getLatitude() + ", " + report.getLongitude() + "). Water:"
                     + report.getWaterType() +  ",  " +report.getWaterCondition();
             LatLng location = new LatLng(report.getLatitude(), report.getLongitude());
             mMap.addMarker(new MarkerOptions().position(location).title(entry));
