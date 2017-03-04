@@ -36,7 +36,7 @@
         android:text="@string/userInfo" />
 
     <Button
-        android:text="Edit Email"
+        android:text="@string/updateEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edit_email"
@@ -45,7 +45,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Edit Password"
+        android:text="@string/updatePass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edit_password"
@@ -54,7 +54,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="logout"
+        android:text="@string/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/logout"
@@ -64,7 +64,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Home"
+        android:text="@string/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/return_home"

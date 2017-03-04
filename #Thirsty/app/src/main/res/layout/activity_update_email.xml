@@ -11,7 +11,7 @@
     tools:context="com.example.user.thirsty.Update_email">
 
     <TextView
-        android:text="New Email:"
+        android:text="@string/newEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -31,7 +31,7 @@
         android:layout_marginTop="13dp" />
 
     <Button
-        android:text="Update Email"
+        android:text="@string/updateEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

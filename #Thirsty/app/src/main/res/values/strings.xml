@@ -14,4 +14,18 @@
     <string name="userInfo" />
     <string name="title_activity_maps">Map</string>
     <string name = "viewMap">View Map</string>
+    <string name = "viewReport">View Reports</string>
+    <string name = "submitReport">Submit Report</string>
+    <string name = "viewProfile">View Profile</string>
+    <string name = "latitude">Latitude: </string>
+    <string name = "longitude">Longitude: </string>
+    <string name = "waterCondition">Water Condition: </string>
+    <string name = "waterType">Water Type: </string>
+    <string name = "reportNumber">Report #</string>
+    <string name = "location">Location: </string>
+    <string name = "updatePass">Update Password</string>
+    <string name = "updateEmail">Update Email</string>
+    <string name = "newEmail">New Email: </string>
+    <string name = "home">Home</string>
 </resources>
+

@@ -22,7 +22,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="View Profile"
+        android:text="@string/viewProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/view_profile"
@@ -32,7 +32,7 @@
         android:onClick="onButtonClick" />
 
     <Button
-        android:text="Submit A Report"
+        android:text="@string/submitReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/submit_report"
@@ -41,7 +41,7 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="View Reports"
+        android:text="@string/viewReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/view_report"

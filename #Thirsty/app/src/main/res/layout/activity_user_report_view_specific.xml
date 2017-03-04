@@ -19,7 +19,7 @@
         android:layout_toEndOf="@+id/textView18" />
 
     <TextView
-        android:text="Report #"
+        android:text="@string/reportNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView18"
@@ -27,7 +27,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Water Type:"
+        android:text="@string/waterType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView20"
@@ -36,7 +36,7 @@
         android:id="@+id/textView21" />
 
     <TextView
-        android:text="Water Condition:"
+        android:text="@string/waterCondition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
@@ -68,7 +68,7 @@
         android:layout_toEndOf="@+id/textView21" />
 
     <TextView
-        android:text="Location:"
+        android:text="@string/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView20"
