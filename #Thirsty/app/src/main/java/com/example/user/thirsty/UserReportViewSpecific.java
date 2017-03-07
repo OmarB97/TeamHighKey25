@@ -30,7 +30,7 @@ public class UserReportViewSpecific extends AppCompatActivity {
 
         TextView displayLatitude = (TextView) findViewById(R.id.latitude_field);
         String latitude = Float.toString(currentReport.getLatitude());
-        displayLocation.setText(latitude);
+        displayLatitude.setText(latitude);
 
         TextView displayWaterType = (TextView) findViewById(R.id.water_type);
         displayWaterType.setText(currentReport.getWaterType());
