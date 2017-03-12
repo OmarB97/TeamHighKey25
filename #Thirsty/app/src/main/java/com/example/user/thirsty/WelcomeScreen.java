@@ -15,6 +15,7 @@ public class WelcomeScreen extends AppCompatActivity {
 
     public static UserDataBase users = new UserDataBase();
     public static WaterSourceReportList activeSourceReportList = new WaterSourceReportList();
+    public static WaterPurityReportList activePurityReportList = new WaterPurityReportList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -15,7 +15,7 @@ public class UserDataBase {
     //private static UserProfile profile;
 
     /**
-     * Constructer for user data base backed by a hashmap.
+     * Constructor for user data base backed by a hashmap.
      */
     public UserDataBase() {
         userDataBase = new HashMap<String, Object>();
@@ -114,6 +114,10 @@ public class UserDataBase {
                 + " and your user type is "
                 + ((UserProfile) userDataBase.get(username)).getUserType() + ".";
 
+    }
+
+    public static String getUserType(String username) {
+        return ((UserProfile) userDataBase.get(username)).getUserType();
     }
 
     /**

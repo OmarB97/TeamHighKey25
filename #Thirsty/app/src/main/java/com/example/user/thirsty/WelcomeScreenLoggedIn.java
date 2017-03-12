@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 /**
  * Created by Dennis Eddington on 2/27/2017.
@@ -28,6 +29,10 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
      */
 
     public void onButtonClick(View view) {
+
+        String user = getIntent().getStringExtra("Username");
+        String permissionLevel = WelcomeScreen.users.getUserType(user.substring(1));
+
         if (view.getId() == R.id.view_profile) {
             Intent i = new Intent(WelcomeScreenLoggedIn.this, Successful_login.class);
             //user = " " + user;
@@ -40,6 +45,16 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
             //user = " " + user;
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+        }
+
+        if (view.getId() == R.id.submit_purity_report && (permissionLevel.equals("Worker") || permissionLevel.equals("Manager"))) {
+            Intent i = new Intent(WelcomeScreenLoggedIn.this, SubmitWaterPurityReport.class);
+            //user = " " + user;
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+        } else {
+            Toast accessDenied = Toast.makeText(WelcomeScreenLoggedIn.this, "Your user account type does not allow you to submit a Purity Report", Toast.LENGTH_SHORT);
+            accessDenied.show();
         }
 
         if (view.getId() == R.id.view_report) {

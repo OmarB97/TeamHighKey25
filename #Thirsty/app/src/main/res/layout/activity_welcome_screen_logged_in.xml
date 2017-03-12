@@ -22,23 +22,23 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="@string/viewProfile"
+        android:text="Submit Purity Report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/view_profile"
-        android:layout_below="@+id/imageView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="13dp"
+        android:id="@+id/submit_purity_report"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/submit_report"
+        android:layout_below="@+id/view_map"
+        android:layout_alignEnd="@+id/submit_report"
         android:onClick="onButtonClick" />
 
     <Button
-        android:text="@string/submitReport"
+        android:id="@+id/view_map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/submit_report"
+        android:text="@string/viewMap"
         android:onClick="onButtonClick"
-        android:layout_below="@+id/view_profile"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/view_report" />
 
     <Button
         android:text="@string/viewReport"
@@ -46,17 +46,24 @@
         android:layout_height="wrap_content"
         android:id="@+id/view_report"
         android:onClick="onButtonClick"
-        android:layout_below="@+id/submit_report"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_marginStart="24dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/view_map" />
 
     <Button
-        android:id="@+id/view_map"
+        android:text="@string/submitReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/viewMap"
-        android:layout_alignBaseline="@+id/view_report"
-        android:layout_alignBottom="@+id/view_report"
+        android:id="@+id/submit_report"
         android:onClick="onButtonClick"
-        android:layout_toEndOf="@+id/view_report" />
+        android:layout_above="@+id/submit_purity_report"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/viewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_profile"
+        android:onClick="onButtonClick"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

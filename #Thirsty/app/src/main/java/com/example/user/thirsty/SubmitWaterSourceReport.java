@@ -51,15 +51,17 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
             EditText longitudePrep = (EditText) findViewById(R.id.longitude_field);
             String latitude = latitudePrep.getText().toString();
             String longitude = longitudePrep.getText().toString();
-            float lat = Float.parseFloat(latitude);
-            float longi = Float.parseFloat(longitude);
 
-            String user = getIntent().getStringExtra("Username");
 
-            String waterType = (String) typeSpinner.getSelectedItem();
-            String waterCondition = (String) conditionSpinner.getSelectedItem();
+            if (latitude.length() > 0 && longitude.length() > 0) {
+                float lat = Float.parseFloat(latitude);
+                float longi = Float.parseFloat(longitude);
 
-            if (latitude.length() > 0 ) {
+                String user = getIntent().getStringExtra("Username");
+
+                String waterType = (String) typeSpinner.getSelectedItem();
+                String waterCondition = (String) conditionSpinner.getSelectedItem();
+
                 WelcomeScreen.activeSourceReportList.addReport(new WaterSourceReport(lat, longi, waterType, waterCondition, user.substring(1)));
                 Toast reportCreated = Toast.makeText(SubmitWaterSourceReport.this,
                         "Report successfully created!", Toast.LENGTH_SHORT);
@@ -68,7 +70,7 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
                 i.putExtra("Username", user);
                 startActivity(i);
             } else {
-                Toast.makeText(this, "Please insert a location", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please insert a longitude/latitude", Toast.LENGTH_SHORT).show();
             }
         }
     }
