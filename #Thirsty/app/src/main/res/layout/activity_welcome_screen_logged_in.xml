@@ -66,4 +66,14 @@
         android:onClick="onButtonClick"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="View Purity Reports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_purity_report"
+        android:layout_above="@+id/view_map"
+        android:layout_alignEnd="@+id/submit_report"
+        android:layout_alignStart="@+id/submit_report"
+        android:onClick="onButtonClick" />
 </RelativeLayout>

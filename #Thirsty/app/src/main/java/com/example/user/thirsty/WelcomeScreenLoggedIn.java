@@ -52,9 +52,19 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
             //user = " " + user;
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
-        } else {
+        } else if (view.getId() == R.id.submit_purity_report) {
             Toast accessDenied = Toast.makeText(WelcomeScreenLoggedIn.this, "Your user account type does not allow you to submit a Purity Report", Toast.LENGTH_SHORT);
             accessDenied.show();
+        }
+
+        if (view.getId() == R.id.view_purity_report && (permissionLevel.equals("Manager"))) {
+            Intent i = new Intent(WelcomeScreenLoggedIn.this, PurityReportView.class);
+            //user = " " + user;
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+        } else if (view.getId() == R.id.view_purity_report) {
+            Toast accessDenied2 = Toast.makeText(WelcomeScreenLoggedIn.this, "Your user account type does not allow you to view Purity Reports", Toast.LENGTH_SHORT);
+            accessDenied2.show();
         }
 
         if (view.getId() == R.id.view_report) {
