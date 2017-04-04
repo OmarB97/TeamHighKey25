@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
+
 /**
  * Created by Dennis Eddington on 2/21/2017.
  * @author Dennis Eddington
@@ -51,6 +55,7 @@ public class Update_email extends AppCompatActivity {
                 Toast emailPopUp = Toast.makeText(Update_email.this,
                         "Email successfully changed!", Toast.LENGTH_SHORT);
                 emailPopUp.show();
+                WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
                 startActivity(i);
             }
 

@@ -63,4 +63,12 @@ public class WaterPurityReportList {
     public static WaterPurityReport getReport(int index) {
         return purityReportList.get(index);
     }
+
+    public static ArrayList<WaterPurityReport> getReportList() {
+        return purityReportList;
+    }
+
+    public static void clearList() {
+        purityReportList.clear();
+    }
 }

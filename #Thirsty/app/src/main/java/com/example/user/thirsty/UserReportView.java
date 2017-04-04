@@ -9,6 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
+
 /**
  * Created by Dennis Eddington on 2/27/2017.
  * @author Dennis Eddington
@@ -20,6 +24,31 @@ public class UserReportView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_report_view);
+        WelcomeScreen.sourceDB.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                WelcomeScreen.activeSourceReportList.clearList();
+                for (DataSnapshot puritySnapShot : dataSnapshot.getChildren()) {
+                    //int reportNumber = Integer.parseInt(puritySnapShot.getKey());
+                    float lat = Float.parseFloat(puritySnapShot.child("latitude").getValue().toString());
+                    float longi = Float.parseFloat(puritySnapShot.child("longitude").getValue().toString());
+                    String waterType = (String) puritySnapShot.child("waterType").getValue();
+                    String waterCondition = (String) puritySnapShot.child("waterCondition").getValue();
+                    String reporter = (String) puritySnapShot.child("reporter").getValue();
+                    WelcomeScreen.activeSourceReportList.addReport(new WaterSourceReport(lat, longi, waterType, waterCondition, reporter));
+                }
+                //Log.d("val", users.ge))
+                //Log.d(TAG, "Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                //Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
         updateListView();
         registerClick();
     }

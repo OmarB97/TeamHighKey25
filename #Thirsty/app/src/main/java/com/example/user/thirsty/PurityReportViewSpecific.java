@@ -30,11 +30,11 @@ public class PurityReportViewSpecific extends AppCompatActivity {
         displayLatitude.setText(latitude);
 
         TextView displayVirus = (TextView) findViewById(R.id.virus_ppm);
-        String virus = Float.toString(currentReport.getLatitude());
+        String virus = Float.toString(currentReport.getVirusPPM());
         displayVirus.setText(virus);
 
         TextView displayContaminant = (TextView) findViewById(R.id.contamination_ppm);
-        String contaminant = Float.toString(currentReport.getLatitude());
+        String contaminant = Float.toString(currentReport.getContaminantPPM());
         displayContaminant.setText(contaminant);
 
 

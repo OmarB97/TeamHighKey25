@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1035161605431",
+    "firebase_url": "https://thirstydb.firebaseio.com",
+    "project_id": "thirstydb",
+    "storage_bucket": "thirstydb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035161605431:android:6bc8697482f14ba9",
+        "android_client_info": {
+          "package_name": "com.example.user.thirsty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035161605431-5qt2nvpsp6s386n1vo4er13he7g8im8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6pEVIsn8kXwQv0a5_P-f4oPIZmNu6wys"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

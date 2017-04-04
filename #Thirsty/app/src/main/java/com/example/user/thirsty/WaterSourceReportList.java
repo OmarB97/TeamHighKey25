@@ -63,4 +63,12 @@ public class WaterSourceReportList {
     public static WaterSourceReport getReport(int index) {
         return sourceReportList.get(index);
     }
+
+    public static void clearList() {
+        sourceReportList.clear();
+    }
+
+    public static ArrayList<WaterSourceReport> getReportList() {
+        return sourceReportList;
+    }
 }

@@ -10,6 +10,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * Created by Heather Song on 3/3/2017.
@@ -42,6 +45,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        WelcomeScreen.sourceDB.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                WelcomeScreen.activeSourceReportList.clearList();
+                for (DataSnapshot puritySnapShot : dataSnapshot.getChildren()) {
+                    //int reportNumber = Integer.parseInt(puritySnapShot.getKey());
+                    float lat = Float.parseFloat(puritySnapShot.child("latitude").getValue().toString());
+                    float longi = Float.parseFloat(puritySnapShot.child("longitude").getValue().toString());
+                    String waterType = (String) puritySnapShot.child("waterType").getValue();
+                    String waterCondition = (String) puritySnapShot.child("waterCondition").getValue();
+                    String reporter = (String) puritySnapShot.child("reporter").getValue();
+                    WelcomeScreen.activeSourceReportList.addReport(new WaterSourceReport(lat, longi, waterType, waterCondition, reporter));
+                }
+                //Log.d("val", users.ge))
+                //Log.d(TAG, "Value is: " + value);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                //Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
         mMap = googleMap;
         LatLng atlanta = new LatLng(33, -84);
         //mMap.addMarker(new MarkerOptions().position(atlanta).title("Marker in Atlanta"));

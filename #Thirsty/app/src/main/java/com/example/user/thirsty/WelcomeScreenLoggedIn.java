@@ -3,8 +3,13 @@ package com.example.user.thirsty;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 
 /**
  * Created by Dennis Eddington on 2/27/2017.
@@ -19,6 +24,8 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen_logged_in);
 
+
+
     }
 
     /**
@@ -31,6 +38,7 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
     public void onButtonClick(View view) {
 
         String user = getIntent().getStringExtra("Username");
+        Log.d("Username", user);
         String permissionLevel = WelcomeScreen.users.getUserType(user.substring(1));
 
         if (view.getId() == R.id.view_profile) {

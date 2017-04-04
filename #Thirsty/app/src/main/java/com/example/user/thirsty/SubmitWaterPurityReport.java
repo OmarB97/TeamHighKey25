@@ -69,6 +69,7 @@ public class SubmitWaterPurityReport extends AppCompatActivity {
                     Toast reportCreated = Toast.makeText(SubmitWaterPurityReport.this,
                             "Report successfully created!", Toast.LENGTH_SHORT);
                     reportCreated.show();
+                    WelcomeScreen.purityDB.setValue(WelcomeScreen.activePurityReportList.getReportList());
                     Intent i = new Intent(SubmitWaterPurityReport.this, WelcomeScreenLoggedIn.class);
                     i.putExtra("Username", user);
                     startActivity(i);

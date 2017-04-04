@@ -92,6 +92,7 @@ public class Registration_screen1 extends AppCompatActivity {
                         Toast accountCreated = Toast.makeText(Registration_screen1.this,
                                 "Account successfully created!", Toast.LENGTH_SHORT);
                         accountCreated.show();
+
                         Intent i = new Intent(Registration_screen1.this, WelcomeScreen.class);
                         startActivity(i);
                     }

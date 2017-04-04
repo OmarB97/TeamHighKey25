@@ -1,5 +1,7 @@
 package com.example.user.thirsty;
 
+import android.util.Log;
+
 import java.util.HashMap;
 
 /**
@@ -11,14 +13,19 @@ import java.util.HashMap;
 
 public class UserDataBase {
 
-    private static HashMap<String, Object> userDataBase;
+    private static HashMap<String, UserProfile> userDataBase;
     //private static UserProfile profile;
 
+    public static void verifyDB() {
+        if (userDataBase == null) {
+            userDataBase = new HashMap<String, UserProfile>();
+        }
+    }
     /**
      * Constructor for user data base backed by a hashmap.
      */
     public UserDataBase() {
-        userDataBase = new HashMap<String, Object>();
+        userDataBase = new HashMap<String, UserProfile>();
     }
 
     /**
@@ -48,6 +55,7 @@ public class UserDataBase {
 
 
         userDataBase.put(username, profile);
+        WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
     }
 
 /*    *//**
@@ -95,7 +103,8 @@ public class UserDataBase {
      * username was corrrect
      */
     public static boolean getPassword(String username, String password) {
-        if (password.equals(((UserProfile) userDataBase.get(username)).getPassword())) {
+        Log.d("val", userDataBase.get(username).getClass() + "*******************************");
+        if (password.equals(userDataBase.get(username).getPassword()) ){
             return true;
         } else {
             return false;
@@ -112,12 +121,12 @@ public class UserDataBase {
         return "Your email is currently set as "
                 + ((UserProfile) userDataBase.get(username)).getEmail()
                 + " and your user type is "
-                + ((UserProfile) userDataBase.get(username)).getUserType() + ".";
+                + (userDataBase.get(username)).getUserType() + ".";
 
     }
 
     public static String getUserType(String username) {
-        return ((UserProfile) userDataBase.get(username)).getUserType();
+        return (userDataBase.get(username)).getUserType();
     }
 
     /**
@@ -138,6 +147,14 @@ public class UserDataBase {
      */
     public static void setPassword(String username, String password) {
         ((UserProfile) userDataBase.get(username)).setPassword(password);
+    }
+
+    public static HashMap<String, UserProfile> getUserDataBase() {
+        return userDataBase;
+    }
+
+    public static void setUserDataBase(HashMap<String, UserProfile> database) {
+        userDataBase = database;
     }
 
 }

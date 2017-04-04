@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
+
 /**
  * Created by Dennis Eddington on 2/21/2017.
  * @author Dennis Eddington
@@ -61,6 +65,7 @@ public class Update_password extends AppCompatActivity {
                     Toast passPopUp = Toast.makeText(Update_password.this,
                             "Password successfully changed!", Toast.LENGTH_SHORT);
                     passPopUp.show();
+                    WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
                     startActivity(i);
                 }
             }

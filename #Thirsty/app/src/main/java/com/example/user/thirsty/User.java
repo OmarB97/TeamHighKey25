@@ -78,4 +78,11 @@ public class User extends UserProfile{
     public void setUserType(String userType) {
         this.userType = userType;
     }
+
+    /*public boolean comparePass(String password) {
+        if (password == this.password) {
+            return true;
+        }
+        return false;
+    }*/
 }

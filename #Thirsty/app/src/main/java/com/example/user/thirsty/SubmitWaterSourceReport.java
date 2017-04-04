@@ -66,6 +66,7 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
                 Toast reportCreated = Toast.makeText(SubmitWaterSourceReport.this,
                         "Report successfully created!", Toast.LENGTH_SHORT);
                 reportCreated.show();
+                WelcomeScreen.sourceDB.setValue(WelcomeScreen.activeSourceReportList.getReportList());
                 Intent i = new Intent(SubmitWaterSourceReport.this, WelcomeScreenLoggedIn.class);
                 i.putExtra("Username", user);
                 startActivity(i);
