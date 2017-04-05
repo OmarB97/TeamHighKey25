@@ -27,5 +27,6 @@
     <string name="updateEmail">Update Email</string>
     <string name="newEmail">New Email: </string>
     <string name="home">Home</string>
+    <string name="title_activity_history_input">HistoryInput</string>
 </resources>
 

@@ -76,4 +76,13 @@
         android:layout_alignEnd="@+id/submit_report"
         android:layout_alignStart="@+id/submit_report"
         android:onClick="onButtonClick" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/view_purity_report"
+        android:onClick="onButtonClick"
+        android:text="History" />
 </RelativeLayout>

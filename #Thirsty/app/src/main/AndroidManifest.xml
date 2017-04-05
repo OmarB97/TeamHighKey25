@@ -52,6 +52,10 @@
         <activity android:name=".SubmitWaterPurityReport" />
         <activity android:name=".PurityReportView" />
         <activity android:name=".PurityReportViewSpecific" />
+        <activity
+            android:name=".HistoryInput"
+            android:label="@string/title_activity_history_input"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@ import com.google.firebase.database.ValueEventListener;
  * Created by Dennis Eddington on 2/27/2017.
  * @author Dennis Eddington
  * @author Heather Song
+ * @author Erika Trejo
  */
 
 public class WelcomeScreenLoggedIn extends AppCompatActivity {
@@ -40,6 +41,12 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
         String user = getIntent().getStringExtra("Username");
         Log.d("Username", user);
         String permissionLevel = WelcomeScreen.users.getUserType(user.substring(1));
+
+        if (view.getId() == R.id.history) {
+            Intent i = new Intent(WelcomeScreenLoggedIn.this, HistoryInput.class);
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+        }
 
         if (view.getId() == R.id.view_profile) {
             Intent i = new Intent(WelcomeScreenLoggedIn.this, Successful_login.class);
