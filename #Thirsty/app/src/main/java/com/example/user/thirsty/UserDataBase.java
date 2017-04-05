@@ -41,7 +41,7 @@ public class UserDataBase {
 
         UserProfile profile;
 
-/*        password = MD5(password);*/
+        password = MD5(password);
 
         if (userType.equals("User")) {
             profile = new User(email, password, userType);
@@ -58,12 +58,12 @@ public class UserDataBase {
         WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
     }
 
-/*    *//**
+    /**
      * Will create a MD5 encryption of the password entered by the user.
      *
      * @param password a plain text password to be encrypted before storage
      * @return MD5 encryption string
-     *//*
+     */
     public static String MD5(String password) {
         try {
             java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
@@ -76,7 +76,7 @@ public class UserDataBase {
         } catch (java.security.NoSuchAlgorithmException e) {
         }
         return null;
-    }*/
+    }
     /**
      * Will return a boolean value confirming whether or not a username already exists within the
      * database.
