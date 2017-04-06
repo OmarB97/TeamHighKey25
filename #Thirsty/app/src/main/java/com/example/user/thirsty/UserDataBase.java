@@ -41,6 +41,31 @@ public class UserDataBase {
 
         UserProfile profile;
 
+        if (userType.equals("User")) {
+            profile = new User(email, password, userType);
+        } else if (userType.equals("Worker")) {
+            profile = new User(email, password, userType);
+        } else if (userType.equals("Manager")) {
+            profile = new User(email, password, userType);
+        } else {
+            profile = new Admin(email, password, userType);
+        }
+
+        userDataBase.put(username, profile);
+        WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
+    }
+    /**
+     * When called, will create a user in the user database by confirming information such as
+     * username, password, email, and user type. For getUserTest
+     *
+     * @param username the username for the User/Admin to be created
+     * @param password the password for the User/Admin to be created
+     * @param email the email for the User/Admin to be created
+     * @param userType the user type for the User/Admin to be created
+     */
+    public static void createUser1(String username, String password, String email, String userType) {
+
+        UserProfile profile;
 
         if (userType.equals("User")) {
             profile = new User(email, password, userType);
@@ -52,9 +77,8 @@ public class UserDataBase {
             profile = new Admin(email, password, userType);
         }
 
-
         userDataBase.put(username, profile);
-        WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
+        //WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
     }
 
     /**
