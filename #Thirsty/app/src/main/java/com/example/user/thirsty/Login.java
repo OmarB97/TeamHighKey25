@@ -36,7 +36,7 @@ public class Login extends AppCompatActivity {
             EditText passPrep = (EditText) findViewById(R.id.TFPassword);
             String pass = passPrep.getText().toString();
 
-            pass = UserDataBase.MD5(pass);
+            pass = WelcomeScreen.users.MD5(pass);
 
 
             if (WelcomeScreen.users.getUser(user) && WelcomeScreen.users.getPassword(user, pass)) {

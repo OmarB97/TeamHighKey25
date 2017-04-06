@@ -40,7 +40,7 @@ public class UserDataBase {
     public static void createUser(String username, String password, String email, String userType) {
 
         UserProfile profile;
-        
+
 
         if (userType.equals("User")) {
             profile = new User(email, password, userType);
