@@ -149,7 +149,11 @@ public class UserDataBase {
     }
 
     public static String getUserType(String username) {
-        return (userDataBase.get(username)).getUserType();
+        if (!getUser(username)) {
+            throw new IllegalArgumentException("Error! User does not exist in the database.");
+        } else {
+            return (userDataBase.get(username)).getUserType();
+        }
     }
 
     /**
