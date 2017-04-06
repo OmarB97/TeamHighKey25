@@ -40,8 +40,7 @@ public class UserDataBase {
     public static void createUser(String username, String password, String email, String userType) {
 
         UserProfile profile;
-
-        password = MD5(password);
+        
 
         if (userType.equals("User")) {
             profile = new User(email, password, userType);
