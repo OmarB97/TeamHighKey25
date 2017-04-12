@@ -52,14 +52,6 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/textView19"
-        android:layout_width="368dp"
-        android:layout_height="0dp"
-        android:text="Year:"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="247dp" />
-
-    <TextView
         android:id="@+id/textView25"
         android:layout_width="368dp"
         android:layout_height="0dp"

@@ -15,15 +15,17 @@ import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by Dennis Eddington on 2/21/2017.
- * @author Dennis Eddington
- * @author Heather Song
+ * Created by Erika Trejo on 4/4/2017.
  * @author Erika Trejo
+ * @author Heather Song
+ * @author Dennis Eddington
  */
 
 public class HistoryInput extends AppCompatActivity {
@@ -60,55 +62,100 @@ public class HistoryInput extends AppCompatActivity {
     public void onButtonClick(View view) {
         String historyYear = "0";
         String history2 = "2017";
+        Float latitudeLoc = 0.0f;
+        Float longitudeLoc = 0.0f;
         if (view.getId() == R.id.history) {
             EditText userPrep = (EditText) findViewById(R.id.yearText);
             historyYear = userPrep.getText().toString();
             history2 = (String) historySpinner.getSelectedItem();
-        }
+
+            EditText userPrep2 = (EditText) findViewById(R.id.longitudeText);
+            longitudeLoc = Float.parseFloat(userPrep2.getText().toString());
+
+            EditText userPrep3 = (EditText) findViewById(R.id.latitudeText);
+            latitudeLoc = Float.parseFloat(userPrep3.getText().toString());        }
 
         //GraphView graph = (GraphView) findViewById(R.id.graph);
         float[] months = new float[12];
         int numReports = 0;
-        for (int i = 1; i < 13; i++) {
-            numReports = 0;
+        float sum = 0;
+        for (int i = 0; i < 12; i++) {
+             numReports = 0;
+             sum = 0;
              for (WaterPurityReport report : WelcomeScreen.activePurityReportList.getReportList()) {
                  Calendar cal = Calendar.getInstance();
                  cal.setTime(report.getDate());
-                 Log.d("val", history2);
-                 if (history2.equals("Virus") && historyYear.equals("2017") && (cal.get(Calendar.MONTH))== i - 1) {
-                     months[i - 1] += report.getVirusPPM();
-                     Log.d("*******", report.getVirusPPM().toString());
+                 //Log.d("val", history2);
+                 //Log.d("!!!!!!", latitudeLoc.toString());
+                 //Log.d("??????", report.getLatitude().toString());
+                 if (history2.equals("Virus") && (cal.get(Calendar.MONTH))== i && String.valueOf(cal.get(Calendar.YEAR)).equals(historyYear)
+                         && latitudeLoc.equals(report.getLatitude()) && latitudeLoc.equals(report.getLatitude())) {
+                     sum += report.getVirusPPM();
+                     numReports++;
+                     //Log.d("&&&&&", report.getVirusPPM().toString());
                  }
-                 if (history2.equals("Contaminant") && historyYear.equals("2017")&& (cal.get(Calendar.MONTH))== i - 1) {
-                     months[i - 1] += report.getContaminantPPM();
+                 if (history2.equals("Contaminant") && String.valueOf(cal.get(Calendar.YEAR)).equals(historyYear) && (cal.get(Calendar.MONTH))== i
+                         && latitudeLoc.equals(report.getLatitude()) && latitudeLoc.equals(report.getLatitude())) {
+                     sum += report.getContaminantPPM();
+                     numReports++;
                  }
-                 numReports++;
              }
-            months[i - 1] = ((float) months[i - 1]) / numReports;
+             if (numReports == 0 ) {
+                 months[i] = 0.0f;
+             } else {
+                 months[i] = sum / numReports;
+             }
         }
 
+        double[] monthsDouble = new double[12];
+        double yMax = 0;
+        for (int i = 0; i < 12; i++) {
+            double ppm = Double.parseDouble(Float.toString(months[i]));
+            monthsDouble[i] = ppm;
+            if (ppm > yMax) {
+                yMax = ppm + 50;
+            }
+        }
+
+        Log.d("******", Arrays.toString(monthsDouble));
+
         GraphView g = (GraphView) findViewById(R.id.graph);
+
+        if (history2.equals("Virus")) {
+            g.setTitle("Virus PPM Trend");
+            g.getGridLabelRenderer().setHorizontalAxisTitle("Months");
+        } else {
+            g.setTitle("Contaminant PPM Trend");
+        }
+        g.getGridLabelRenderer().setVerticalAxisTitle("PPM");
+        g.getGridLabelRenderer().setPadding(5);
         g.removeAllSeries();
         g.getViewport().setXAxisBoundsManual(true);
         g.getViewport().setMinX(0);
         g.getViewport().setMaxX(13);
+
+        g.getViewport().setYAxisBoundsManual(true);
+        g.getViewport().setMinY(0);
+        g.getViewport().setMaxY(yMax);
+
+
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
-                new DataPoint(1, months[0]),
-                new DataPoint(2, months[1]),
-                new DataPoint(3, months[2]),
-                new DataPoint(4, months[3]),
-                new DataPoint(5, months[4]),
-                new DataPoint(6, months[5]),
-                new DataPoint(7, months[6]),
-                new DataPoint(8, months[7]),
-                new DataPoint(9, months[8]),
-                new DataPoint(10, months[9]),
-                new DataPoint(11, months[10]),
-                new DataPoint(12, months[11]),
-
-
-
+                new DataPoint(1, monthsDouble[0]),
+                new DataPoint(2, monthsDouble[1]),
+                new DataPoint(3, monthsDouble[2]),
+                new DataPoint(4, monthsDouble[3]),
+                new DataPoint(5, monthsDouble[4]),
+                new DataPoint(6, monthsDouble[5]),
+                new DataPoint(7, monthsDouble[6]),
+                new DataPoint(8, monthsDouble[7]),
+                new DataPoint(9, monthsDouble[8]),
+                new DataPoint(10, monthsDouble[9]),
+                new DataPoint(11, monthsDouble[10]),
+                new DataPoint(12, monthsDouble[11]),
         });
+
+        series.setDrawDataPoints(true);
+
 
         g.addSeries(series);
     }

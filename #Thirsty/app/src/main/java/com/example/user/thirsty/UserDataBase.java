@@ -126,7 +126,7 @@ public class UserDataBase {
      * username was corrrect
      */
     public static boolean getPassword(String username, String password) {
-        Log.d("val", userDataBase.get(username).getClass() + "*******************************");
+        //Log.d("val", userDataBase.get(username).getClass() + "*******************************");
         if (password.equals(userDataBase.get(username).getPassword()) ){
             return true;
         } else {

@@ -7,66 +7,76 @@
     tools:context="com.example.user.thirsty.HistoryInput">
 
     <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        android:id="@+id/graph"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <RelativeLayout
-        android:layout_width="368dp"
-        android:layout_height="551dp"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="65dp">
+        android:layout_width="388dp"
+        android:layout_height="612dp"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="35dp">
 
-
-
-        <TextView
-            android:id="@+id/textView28"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="181dp"
-            android:layout_marginStart="28dp"
-            android:text="Year"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <EditText
             android:id="@+id/yearText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView28"
-            android:layout_alignTop="@+id/textView28"
-            android:layout_marginTop="53dp"
+            android:layout_above="@+id/historyType"
+            android:layout_alignParentStart="true"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:text="year" />
 
         <TextView
             android:id="@+id/historyType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Type"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:layout_above="@+id/spinner2"
-            android:layout_alignStart="@+id/textView28" />
+            android:layout_alignStart="@+id/textView28"
+            android:text="History Of:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <Spinner
             android:id="@+id/spinner2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/textView28"
+            android:layout_above="@+id/history"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="27dp" />
+            android:layout_marginBottom="25dp" />
 
         <Button
             android:id="@+id/history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/yearText"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="22dp"
+            android:layout_marginBottom="85dp"
             android:onClick="onButtonClick"
             android:text="View" />
+
+        <EditText
+            android:id="@+id/latitudeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/longitudeText"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="30dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="latitude" />
+
+        <EditText
+            android:id="@+id/longitudeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/yearText"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="26dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="longitude" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
