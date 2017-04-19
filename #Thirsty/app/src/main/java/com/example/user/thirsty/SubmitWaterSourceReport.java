@@ -9,6 +9,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,6 +26,8 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
     public List<String> legalConditions = Arrays.asList("Waste", "Treatable-Clear", "Treatable-Muddy", "Potable");
     private Spinner typeSpinner;
     private Spinner conditionSpinner;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +43,7 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
         ArrayAdapter<String> adapter2 = new ArrayAdapter(this,android.R.layout.simple_spinner_item, legalConditions);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         conditionSpinner.setAdapter(adapter2);
+
     }
 
     /**
