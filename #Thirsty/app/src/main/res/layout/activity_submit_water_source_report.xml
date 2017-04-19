@@ -94,7 +94,7 @@
         android:layout_marginTop="35dp"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
-        android:text= "30.422" />/>
+        android:text= "30.422" />
 
 
 </RelativeLayout>
