@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_welcome_screen_logged_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.user.thirsty.WelcomeScreenLoggedIn"
+    android:onClick="onButtonClick">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/custom_logo"
+        android:layout_marginTop="53dp"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Submit Purity Report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_purity_report"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/submit_report"
+        android:layout_below="@+id/view_map"
+        android:layout_alignEnd="@+id/submit_report"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:id="@+id/view_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/viewMap"
+        android:onClick="onButtonClick"
+        android:layout_above="@+id/view_report" />
+
+    <Button
+        android:text="@string/viewReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_report"
+        android:onClick="onButtonClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/view_map" />
+
+    <Button
+        android:text="@string/submitReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_report"
+        android:onClick="onButtonClick"
+        android:layout_above="@+id/submit_purity_report"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/viewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_profile"
+        android:onClick="onButtonClick"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/imageView2" />
+
+    <Button
+        android:text="View Purity Reports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_purity_report"
+        android:layout_above="@+id/view_map"
+        android:layout_alignEnd="@+id/submit_report"
+        android:layout_alignStart="@+id/submit_report"
+        android:onClick="onButtonClick" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/view_purity_report"
+        android:onClick="onButtonClick"
+        android:text="History" />
+
+    <Button
+        android:id="@+id/adminConsole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:onClick="onButtonClick"
+        android:text="Admin Console" />
+</RelativeLayout>

@@ -36,7 +36,6 @@ public class Update_email extends AppCompatActivity {
         if (view.getId() == R.id.update_email) {
             EditText emailPrep = (EditText) findViewById(R.id.new_email);
             String email = emailPrep.getText().toString();
-
             String username = getIntent().getStringExtra("Username");
             username = username.substring(1);
 

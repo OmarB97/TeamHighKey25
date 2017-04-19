@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by Dennis Eddington on 2/21/2017.
@@ -41,10 +42,23 @@ public class Login extends AppCompatActivity {
 
 
             if (WelcomeScreen.users.getUser(user) && WelcomeScreen.users.getPassword(user, pass)) {
-                Intent i = new Intent(Login.this, WelcomeScreenLoggedIn.class);
-                user = " " + user;
-                i.putExtra("Username", user);
-                startActivity(i);
+                if (!WelcomeScreen.users.getAccountStatus(user)) {
+                    if (WelcomeScreen.users.getUserType(user).equals("Admin")) {
+                        Intent i = new Intent(Login.this, WelcomeScreenLoggedInADMIN.class);
+                        user = " " + user;
+                        i.putExtra("Username", user);
+                        startActivity(i);
+                    } else {
+                        Intent i = new Intent(Login.this, WelcomeScreenLoggedIn.class);
+                        user = " " + user;
+                        i.putExtra("Username", user);
+                        startActivity(i);
+                    }
+                } else {
+                    Toast accountBan = Toast.makeText(Login.this,
+                            "This account has been banned, please contact an Administrator", Toast.LENGTH_SHORT);
+                    accountBan.show();
+                }
             } else {
                 Intent i = new Intent(Login.this, Bad_login.class);
                 startActivity(i);

@@ -48,6 +48,7 @@
         <activity android:name=".Update_password" />
         <activity android:name=".Update_email" />
         <activity android:name=".WelcomeScreenLoggedIn" />
+        <activity android:name=".WelcomeScreenLoggedInADMIN" />
         <activity android:name=".SubmitWaterSourceReport" />
         <activity android:name=".UserReportView" />
         <activity android:name=".UserReportViewSpecific" />
@@ -61,6 +62,7 @@
             android:name=".HistoryInput"
             android:label="@string/title_activity_history_input"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Admin_Console"></activity>
     </application>
 
 </manifest>

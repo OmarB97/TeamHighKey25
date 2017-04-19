@@ -46,4 +46,8 @@ public abstract class UserProfile {
 
     abstract String getSalt();
 
+    abstract boolean getAccountStatus();
+
+    abstract void setAccountStatus(boolean status);
+
 }

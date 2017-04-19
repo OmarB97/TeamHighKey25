@@ -38,18 +38,18 @@ public class UserDataBase {
      * @param email the email for the User/Admin to be created
      * @param userType the user type for the User/Admin to be created
      */
-    public static void createUser(String username, String password, String email, String userType, String uniqueSalt) {
+    public static void createUser(String username, String password, String email, String userType, String uniqueSalt, boolean accStatus) {
 
         UserProfile profile;
 
         if (userType.equals("User")) {
-            profile = new User(email, password, userType, uniqueSalt);
+            profile = new User(email, password, userType, uniqueSalt, accStatus);
         } else if (userType.equals("Worker")) {
-            profile = new User(email, password, userType, uniqueSalt);
+            profile = new User(email, password, userType, uniqueSalt, accStatus);
         } else if (userType.equals("Manager")) {
-            profile = new User(email, password, userType, uniqueSalt);
+            profile = new User(email, password, userType, uniqueSalt, accStatus);
         } else {
-            profile = new Admin(email, password, userType, uniqueSalt);
+            profile = new Admin(email, password, userType, uniqueSalt, accStatus);
         }
 
         userDataBase.put(username, profile);
@@ -140,6 +140,17 @@ public class UserDataBase {
         } else {
             return "";
         }
+    }
+
+    public static boolean getAccountStatus(String username) {
+        if (userDataBase.containsKey(username)) {
+            return userDataBase.get(username).getAccountStatus();
+        }
+        return true;
+    }
+
+    public static void setAccountStatus(String username, boolean accStatus) {
+        userDataBase.get(username).setAccountStatus(accStatus);
     }
 
     /**

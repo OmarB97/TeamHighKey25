@@ -12,6 +12,8 @@ public class User extends UserProfile{
     private String email;
     private String userType;
     private String salt;
+    private boolean isBanned;
+
     /**
      *Constructor for an user object. Takes in an email, a password, and a user type and assigns
      * them to the object.
@@ -20,11 +22,12 @@ public class User extends UserProfile{
      * @param password the password for the User object
      * @param userType the userType for the User object
      */
-    public User(String email, String password, String userType, String salt) {
+    public User(String email, String password, String userType, String salt, boolean accStatus) {
         this.password = password;
         this.email = email;
         this.userType = userType;
         this.salt = salt;
+        this.isBanned = accStatus;
     }
 
     /**
@@ -90,5 +93,13 @@ public class User extends UserProfile{
 
     public String getSalt() {
         return salt;
+    }
+
+    public boolean getAccountStatus() {
+        return isBanned;
+    }
+
+    public void setAccountStatus(boolean status) {
+        isBanned = status;
     }
 }

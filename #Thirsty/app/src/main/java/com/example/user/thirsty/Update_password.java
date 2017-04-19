@@ -59,7 +59,8 @@ public class Update_password extends AppCompatActivity {
                 }
 
                 if (pass.equals(confirmPass)) {
-                    WelcomeScreen.users.setPassword(username, UserDataBase.MD5(pass));
+                    String uniqueSalt = WelcomeScreen.users.getSalt(username);
+                    WelcomeScreen.users.setPassword(username, UserDataBase.MD5(pass + uniqueSalt));
                     Intent i = new Intent(Update_password.this,Successful_login.class);
                     i.putExtra("Username", getIntent().getStringExtra("Username"));
                     Toast passPopUp = Toast.makeText(Update_password.this,

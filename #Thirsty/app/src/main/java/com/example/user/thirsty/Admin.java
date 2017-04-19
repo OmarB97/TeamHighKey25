@@ -11,6 +11,7 @@ public class Admin extends UserProfile {
     private String email;
     private String userType;
     private String salt;
+    private boolean isBanned = false;
 
     /**
      *Constructor for an admin object. Takes in an email, a password, and a user type and assigns
@@ -20,11 +21,12 @@ public class Admin extends UserProfile {
      * @param password the password for the Admin object
      * @param userType the userType for the Admin object
      */
-    public Admin(String email, String password, String userType, String salt) {
+    public Admin(String email, String password, String userType, String salt, boolean accStatus) {
         this.password = password;
         this.email = email;
         this.userType = userType;
         this.salt = salt;
+        this.isBanned = accStatus;
     }
 
     /**
@@ -83,5 +85,13 @@ public class Admin extends UserProfile {
 
     public String getSalt() {
         return salt;
+    }
+
+    public boolean getAccountStatus() {
+        return isBanned;
+    }
+
+    public void setAccountStatus(boolean status) {
+        isBanned = status;
     }
 }
