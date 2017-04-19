@@ -54,9 +54,15 @@ public class Successful_login extends AppCompatActivity {
         }
 
         if (view.getId() == R.id.return_home) {
-            Intent i = new Intent(Successful_login.this, WelcomeScreenLoggedIn.class);
-            i.putExtra("Username", getIntent().getStringExtra("Username"));
-            startActivity(i);
+            if (WelcomeScreen.users.getUserType(getIntent().getStringExtra("Username").substring(1)).equals("Admin")) {
+                Intent i = new Intent(Successful_login.this, WelcomeScreenLoggedInADMIN.class);
+                i.putExtra("Username", getIntent().getStringExtra("Username"));
+                startActivity(i);
+            } else {
+                Intent i = new Intent(Successful_login.this, WelcomeScreenLoggedIn.class);
+                i.putExtra("Username", getIntent().getStringExtra("Username"));
+                startActivity(i);
+            }
         }
     }
 }

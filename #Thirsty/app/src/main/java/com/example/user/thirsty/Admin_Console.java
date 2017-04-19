@@ -26,6 +26,7 @@ public class Admin_Console extends AppCompatActivity {
                     Toast accountUnban = Toast.makeText(Admin_Console.this,
                             user + " has been unbanned!", Toast.LENGTH_SHORT);
                     accountUnban.show();
+                    WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
                 } else {
                     Toast accountNotBanned = Toast.makeText(Admin_Console.this,
                             "This account is currently not banned", Toast.LENGTH_SHORT);
@@ -48,6 +49,7 @@ public class Admin_Console extends AppCompatActivity {
                     Toast accountBan = Toast.makeText(Admin_Console.this,
                             user + " has been banned!", Toast.LENGTH_SHORT);
                     accountBan.show();
+                    WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
                 } else {
                     Toast accountNotBanned = Toast.makeText(Admin_Console.this,
                             "This account is currently banned", Toast.LENGTH_SHORT);
