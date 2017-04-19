@@ -1,6 +1,7 @@
 package com.example.user.thirsty;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +27,11 @@ public class Admin_Console extends AppCompatActivity {
                     Toast accountUnban = Toast.makeText(Admin_Console.this,
                             user + " has been unbanned!", Toast.LENGTH_SHORT);
                     accountUnban.show();
+                    Intent i = new Intent(Admin_Console.this,WelcomeScreenLoggedInADMIN.class);
+                    i.putExtra("Username", getIntent().getStringExtra("Username"));
                     WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
+                    startActivity(i);
+
                 } else {
                     Toast accountNotBanned = Toast.makeText(Admin_Console.this,
                             "This account is currently not banned", Toast.LENGTH_SHORT);
@@ -49,7 +54,10 @@ public class Admin_Console extends AppCompatActivity {
                     Toast accountBan = Toast.makeText(Admin_Console.this,
                             user + " has been banned!", Toast.LENGTH_SHORT);
                     accountBan.show();
+                    Intent i = new Intent(Admin_Console.this,WelcomeScreenLoggedInADMIN.class);
+                    i.putExtra("Username", getIntent().getStringExtra("Username"));
                     WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
+                    startActivity(i);
                 } else {
                     Toast accountNotBanned = Toast.makeText(Admin_Console.this,
                             "This account is currently banned", Toast.LENGTH_SHORT);
