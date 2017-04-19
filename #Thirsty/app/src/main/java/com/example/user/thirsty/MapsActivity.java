@@ -41,7 +41,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private static final int MY_PERMISSION_ACCESS_FINE_LOCATION  = 11;
     public static final String TAG = MapsActivity.class.getSimpleName();
-
+    public float myLatitude;
+    protected float myLongitude;
 
     public static final CameraPosition ATLANTA = new CameraPosition.Builder().target(new LatLng(33.4, -84.2))
             .zoom(5.5f)
@@ -93,7 +94,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             //user = " " + user;
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
-
         }
     }
 
@@ -173,7 +173,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Log.d(TAG, location.toString());
 
         double currentLatitude = location.getLatitude();
+        myLatitude = (float)currentLatitude;
         double currentLongitude = location.getLongitude();
+        myLongitude = (float)currentLongitude;
         LatLng latLng = new LatLng(currentLatitude, currentLongitude);
 
         MarkerOptions options = new MarkerOptions()

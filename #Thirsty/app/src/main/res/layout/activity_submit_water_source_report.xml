@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.user.thirsty.SubmitWaterSourceReport">
 
+
     <Button
         android:text="@string/submitReport"
         android:layout_width="wrap_content"
@@ -37,7 +38,8 @@
         android:layout_below="@+id/textView7"
         android:layout_marginTop="11dp"
         android:ems="10"
-        android:inputType="numberSigned|numberDecimal" />
+        android:inputType="numberSigned|numberDecimal"
+        android:text= "-122.084" />
 
 
 
@@ -91,7 +93,8 @@
         android:layout_below="@+id/latitude_field"
         android:layout_marginTop="35dp"
         android:ems="10"
-        android:inputType="numberSigned|numberDecimal" />
+        android:inputType="numberSigned|numberDecimal"
+        android:text= "30.422" />/>
 
 
 </RelativeLayout>
