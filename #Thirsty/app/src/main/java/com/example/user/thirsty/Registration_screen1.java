@@ -88,8 +88,9 @@ public class Registration_screen1 extends AppCompatActivity {
                                 "This user already exists", Toast.LENGTH_SHORT);
                         existsPopUp.show();
                     } else {
-
-                        WelcomeScreen.users.createUser(user, UserDataBase.MD5(pass), email, userType);
+                        String uniqueSalt = UserDataBase.SaltShaker();
+                        pass = pass + uniqueSalt;
+                        WelcomeScreen.users.createUser(user, UserDataBase.MD5(pass), email, userType, uniqueSalt);
                         Toast accountCreated = Toast.makeText(Registration_screen1.this,
                                 "Account successfully created!", Toast.LENGTH_SHORT);
                         accountCreated.show();

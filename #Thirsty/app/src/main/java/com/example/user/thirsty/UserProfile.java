@@ -44,4 +44,6 @@ public abstract class UserProfile {
      */
     abstract void setEmail(String email);
 
+    abstract String getSalt();
+
 }

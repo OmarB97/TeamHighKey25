@@ -10,6 +10,7 @@ public class Admin extends UserProfile {
     private String password;
     private String email;
     private String userType;
+    private String salt;
 
     /**
      *Constructor for an admin object. Takes in an email, a password, and a user type and assigns
@@ -19,10 +20,11 @@ public class Admin extends UserProfile {
      * @param password the password for the Admin object
      * @param userType the userType for the Admin object
      */
-    public Admin(String email, String password, String userType) {
+    public Admin(String email, String password, String userType, String salt) {
         this.password = password;
         this.email = email;
         this.userType = userType;
+        this.salt = salt;
     }
 
     /**
@@ -77,5 +79,9 @@ public class Admin extends UserProfile {
      */
     public void setUserType(String userType) {
         this.userType = userType;
+    }
+
+    public String getSalt() {
+        return salt;
     }
 }

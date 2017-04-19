@@ -3,6 +3,7 @@ package com.example.user.thirsty;
 import android.util.Log;
 
 import java.util.HashMap;
+import java.util.Random;
 
 /**
  * Created by Dennis Eddington on 2/21/2017.
@@ -37,18 +38,18 @@ public class UserDataBase {
      * @param email the email for the User/Admin to be created
      * @param userType the user type for the User/Admin to be created
      */
-    public static void createUser(String username, String password, String email, String userType) {
+    public static void createUser(String username, String password, String email, String userType, String uniqueSalt) {
 
         UserProfile profile;
 
         if (userType.equals("User")) {
-            profile = new User(email, password, userType);
+            profile = new User(email, password, userType, uniqueSalt);
         } else if (userType.equals("Worker")) {
-            profile = new User(email, password, userType);
+            profile = new User(email, password, userType, uniqueSalt);
         } else if (userType.equals("Manager")) {
-            profile = new User(email, password, userType);
+            profile = new User(email, password, userType, uniqueSalt);
         } else {
-            profile = new Admin(email, password, userType);
+            profile = new Admin(email, password, userType, uniqueSalt);
         }
 
         userDataBase.put(username, profile);
@@ -63,9 +64,10 @@ public class UserDataBase {
      * @param email the email for the User/Admin to be created
      * @param userType the user type for the User/Admin to be created
      */
-    public static void createUser1(String username, String password, String email, String userType) {
+/*    public static void createUser1(String username, String password, String email, String userType) {
 
         UserProfile profile;
+
 
         if (userType.equals("User")) {
             profile = new User(email, password, userType);
@@ -74,11 +76,28 @@ public class UserDataBase {
         } else if (userType.equals("Manager")) {
             profile = new User(email, password, userType);
         } else {
-            profile = new Admin(email, password, userType);
+            profile = new Admin(email, password, userType, uniqueSalt);
         }
 
         userDataBase.put(username, profile);
         //WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
+    }*/
+
+    /**
+     * Generates a random salt for a password
+     * @return
+     */
+    public static String SaltShaker() {
+        String SALT_POTENTIAL = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()-+/?,.~`";
+        StringBuilder salt = new StringBuilder();
+        Random rand = new Random();
+        while (salt.length() < 20) { // length of the random string.
+            int index = (int) (rand.nextFloat() * SALT_POTENTIAL.length());
+            salt.append(SALT_POTENTIAL.charAt(index));
+        }
+        String saltyStr = salt.toString();
+        return saltyStr;
+
     }
 
     /**
@@ -112,6 +131,14 @@ public class UserDataBase {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public static String getSalt(String username) {
+        if (userDataBase.containsKey(username)) {
+             return userDataBase.get(username).getSalt();
+        } else {
+            return "";
         }
     }
 

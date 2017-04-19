@@ -11,6 +11,7 @@ public class User extends UserProfile{
     private String password;
     private String email;
     private String userType;
+    private String salt;
     /**
      *Constructor for an user object. Takes in an email, a password, and a user type and assigns
      * them to the object.
@@ -19,10 +20,11 @@ public class User extends UserProfile{
      * @param password the password for the User object
      * @param userType the userType for the User object
      */
-    public User(String email, String password, String userType) {
+    public User(String email, String password, String userType, String salt) {
         this.password = password;
         this.email = email;
         this.userType = userType;
+        this.salt = salt;
     }
 
     /**
@@ -85,4 +87,8 @@ public class User extends UserProfile{
         }
         return false;
     }*/
+
+    public String getSalt() {
+        return salt;
+    }
 }
