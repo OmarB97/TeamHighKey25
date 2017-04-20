@@ -42,6 +42,12 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
         Log.d("Username", user);
         String permissionLevel = WelcomeScreen.users.getUserType(user.substring(1));
 
+        if (view.getId() == R.id.user_button) {
+            Intent i = new Intent(WelcomeScreenLoggedIn.this, UserSubmissions.class);
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+        }
+
         if (view.getId() == R.id.history) {
             Intent i = new Intent(WelcomeScreenLoggedIn.this, HistoryInput.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));

@@ -62,7 +62,8 @@
             android:name=".HistoryInput"
             android:label="@string/title_activity_history_input"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Admin_Console"></activity>
+        <activity android:name=".Admin_Console" />
+        <activity android:name=".UserSubmissions"></activity>
     </application>
 
 </manifest>

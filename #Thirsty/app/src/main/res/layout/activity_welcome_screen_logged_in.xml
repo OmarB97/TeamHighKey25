@@ -85,4 +85,13 @@
         android:layout_below="@+id/view_purity_report"
         android:onClick="onButtonClick"
         android:text="History" />
+
+    <Button
+        android:id="@+id/user_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onButtonClick"
+        android:text="Users" />
 </RelativeLayout>
