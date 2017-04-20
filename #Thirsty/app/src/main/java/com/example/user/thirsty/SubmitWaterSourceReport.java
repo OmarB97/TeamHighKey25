@@ -9,16 +9,13 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-
 import java.util.Arrays;
 import java.util.List;
 
 /**
  * Created by Dennis Eddington on 2/27/2017.
  * @author Dennis Eddington
+ * @author Heather Song
  */
 
 public class SubmitWaterSourceReport extends AppCompatActivity {
@@ -80,6 +77,22 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Please insert a longitude/latitude", Toast.LENGTH_SHORT).show();
             }
+        }
+        if (view.getId() == R.id.autoSource) {
+            float lat = MapsActivity.myLatitude;
+            float longi = MapsActivity.myLongitude;
+            String user = getIntent().getStringExtra("Username");
+            String waterType = (String) typeSpinner.getSelectedItem();
+            String waterCondition = (String) conditionSpinner.getSelectedItem();
+            WelcomeScreen.activeSourceReportList.addReport(new WaterSourceReport(lat, longi, waterType, waterCondition, user.substring(1)));
+            Toast reportCreated = Toast.makeText(SubmitWaterSourceReport.this,
+                    "Report successfully created!", Toast.LENGTH_SHORT);
+            reportCreated.show();
+            WelcomeScreen.sourceDB.setValue(WelcomeScreen.activeSourceReportList.getReportList());
+            Intent i = new Intent(SubmitWaterSourceReport.this, WelcomeScreenLoggedIn.class);
+            i.putExtra("Username", user);
+            startActivity(i);
+
         }
     }
 

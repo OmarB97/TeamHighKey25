@@ -36,8 +36,7 @@
         android:inputType="numberSigned|numberDecimal"
         android:layout_below="@+id/textView16"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp"
-        android:text= "-122.084"/>
+        android:layout_marginTop="15dp" />
 
     <EditText
         android:id="@+id/longitude_field"
@@ -47,8 +46,7 @@
         android:inputType="numberSigned|numberDecimal"
         android:layout_marginTop="11dp"
         android:layout_below="@+id/textView17"
-        android:layout_alignParentStart="true"
-        android:text= "30.422"/>
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="Virus PPM:"
@@ -108,8 +106,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/submit_report"
+        android:layout_marginBottom="14dp"
+        android:onClick="onButtonClick"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:onClick="onButtonClick" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp" />
+
+    <Button
+        android:id="@+id/autoPurity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/submit_report"
+        android:layout_alignStart="@+id/textvie18"
+        android:layout_marginStart="33dp"
+        android:onClick="onButtonClick"
+        android:text="AutoSubmit" />
 </RelativeLayout>

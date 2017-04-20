@@ -54,8 +54,6 @@ public class SubmitWaterPurityReport extends AppCompatActivity {
             String longitude = longitudePrep.getText().toString();
             String virus = virusPrep.getText().toString();
             String contaminant = contaminantPrep.getText().toString();
-
-
             if (latitude.length() > 0 && longitude.length() > 0 && virus.length() > 0 && contaminant.length() > 0) {
                 lat = Float.parseFloat(latitude);
                 longi = Float.parseFloat(longitude);
@@ -79,10 +77,36 @@ public class SubmitWaterPurityReport extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Please insert a location or virus/contaminant PPM", Toast.LENGTH_SHORT).show();
             }
-
-
-
-
         }
+        if (view.getId() == R.id.autoPurity) {
+            EditText virusPrep = (EditText) findViewById(R.id.virus_field);
+            EditText contaminantPrep = (EditText) findViewById(R.id.contaminant_field);
+            String virus = virusPrep.getText().toString();
+            String contaminant = contaminantPrep.getText().toString();
+            float lat = MapsActivity.myLatitude;
+            float longi = MapsActivity.myLongitude;
+            if (virus.length() > 0 && contaminant.length() > 0) {
+                vir = Float.parseFloat(virus);
+                cont = Float.parseFloat(contaminant);
+                String user = getIntent().getStringExtra("Username");
+                String waterCondition = (String) conditionSpinner.getSelectedItem();
+
+                if (virus.length() > 0 && contaminant.length() > 0) {
+                    WelcomeScreen.activePurityReportList.addReport(new WaterPurityReport(vir, cont, lat, longi, waterCondition, user.substring(1)));
+                    Toast reportCreated = Toast.makeText(SubmitWaterPurityReport.this,
+                            "Report successfully created!", Toast.LENGTH_SHORT);
+                    reportCreated.show();
+                    WelcomeScreen.purityDB.setValue(WelcomeScreen.activePurityReportList.getReportList());
+                    Intent i = new Intent(SubmitWaterPurityReport.this, WelcomeScreenLoggedIn.class);
+                    i.putExtra("Username", user);
+                    startActivity(i);
+                } else {
+                    Toast.makeText(this, "Please insert a location or virus/contaminant PPM", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(this, "Please insert a location or virus/contaminant PPM", Toast.LENGTH_SHORT).show();
+            }
+        }
+
     }
 }

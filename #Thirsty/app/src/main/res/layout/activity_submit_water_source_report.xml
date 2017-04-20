@@ -15,11 +15,12 @@
         android:text="@string/submitReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
         android:id="@+id/submit"
-        android:onClick="onButtonClick" />
+        android:onClick="onButtonClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:text="@string/latitude"
@@ -38,8 +39,7 @@
         android:layout_below="@+id/textView7"
         android:layout_marginTop="11dp"
         android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-        android:text= "-122.084" />
+        android:inputType="numberSigned|numberDecimal" />
 
 
 
@@ -93,8 +93,16 @@
         android:layout_below="@+id/latitude_field"
         android:layout_marginTop="35dp"
         android:ems="10"
-        android:inputType="numberSigned|numberDecimal"
-        android:text= "30.422" />
+        android:inputType="numberSigned|numberDecimal" />
+
+    <Button
+        android:id="@+id/autoSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conditionSpinner"
+        android:layout_toEndOf="@+id/textView7"
+        android:onClick="onButtonClick"
+        android:text="AutoSubmit" />
 
 
 </RelativeLayout>

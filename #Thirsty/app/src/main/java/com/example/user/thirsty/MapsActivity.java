@@ -41,8 +41,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private static final int MY_PERMISSION_ACCESS_FINE_LOCATION  = 11;
     public static final String TAG = MapsActivity.class.getSimpleName();
-    public float myLatitude;
-    protected float myLongitude;
+    public static float myLatitude;
+    protected static float myLongitude;
 
     public static final CameraPosition ATLANTA = new CameraPosition.Builder().target(new LatLng(33.4, -84.2))
             .zoom(5.5f)
