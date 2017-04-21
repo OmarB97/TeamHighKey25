@@ -104,4 +104,14 @@
         android:layout_alignBottom="@+id/textView15"
         android:layout_toEndOf="@+id/textView22" />
 
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:onClick="onButtonClick"
+        android:text="Delete Report" />
+
 </RelativeLayout>

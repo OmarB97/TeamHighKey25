@@ -83,6 +83,7 @@ public class UserReportView extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
                 Intent i = new Intent(UserReportView.this, UserReportViewSpecific.class);
                 i.putExtra("RepNumber", position);
+                i.putExtra("Username", getIntent().getStringExtra("Username"));
                 startActivity(i);
             }
         });

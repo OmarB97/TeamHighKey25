@@ -32,7 +32,7 @@ public class WaterSourceReportList {
      * @param reportNumber the index of the report to be removed
      */
     public static void removeReport(int reportNumber) {
-        sourceReportList.remove(reportNumber - 1);
+        sourceReportList.remove(reportNumber);
     }
 
 
