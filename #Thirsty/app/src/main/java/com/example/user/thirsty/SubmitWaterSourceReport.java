@@ -76,6 +76,7 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
                 i.putExtra("Username", user);
                 MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
                 mp.start();
+                Log.writeLogEvent("Source Submission Event", user);
                 startActivity(i);
             } else {
                 Toast.makeText(this, "Please insert a longitude/latitude", Toast.LENGTH_SHORT).show();
@@ -96,6 +97,8 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
             i.putExtra("Username", user);
             MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
             mp.start();
+            Log.writeLogEvent("Source Submission Event", user);
+
             startActivity(i);
 
         }

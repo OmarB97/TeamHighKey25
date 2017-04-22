@@ -30,6 +30,7 @@ public class Admin_Console extends AppCompatActivity {
                     Intent i = new Intent(Admin_Console.this,WelcomeScreenLoggedInADMIN.class);
                     i.putExtra("Username", getIntent().getStringExtra("Username"));
                     WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
+                    Log.writeLogEvent("Unban User Event", user);
                     startActivity(i);
 
                 } else {
@@ -57,6 +58,7 @@ public class Admin_Console extends AppCompatActivity {
                     Intent i = new Intent(Admin_Console.this,WelcomeScreenLoggedInADMIN.class);
                     i.putExtra("Username", getIntent().getStringExtra("Username"));
                     WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
+                    Log.writeLogEvent("Ban User Event", user);
                     startActivity(i);
                 } else {
                     Toast accountNotBanned = Toast.makeText(Admin_Console.this,

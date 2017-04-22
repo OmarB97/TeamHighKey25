@@ -42,6 +42,7 @@ public class Login extends AppCompatActivity {
 
 
             if (WelcomeScreen.users.getUser(user) && WelcomeScreen.users.getPassword(user, pass)) {
+                Log.writeLogEvent("Login Event", user);
                 if (!WelcomeScreen.users.getAccountStatus(user)) {
                     if (WelcomeScreen.users.getUserType(user).equals("Admin")) {
                         Intent i = new Intent(Login.this, WelcomeScreenLoggedInADMIN.class);

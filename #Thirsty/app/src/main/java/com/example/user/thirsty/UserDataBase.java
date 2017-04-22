@@ -3,6 +3,7 @@ package com.example.user.thirsty;
 import android.util.Log;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 /**

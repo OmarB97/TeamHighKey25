@@ -99,6 +99,8 @@ public class Registration_screen1 extends AppCompatActivity {
                         Intent i = new Intent(Registration_screen1.this, WelcomeScreen.class);
                         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
                         mp.start();
+                        Log.writeLogEvent("Registration Event", user);
+
                         startActivity(i);
                     }
                 }
