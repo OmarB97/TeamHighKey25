@@ -1,6 +1,7 @@
 package com.example.user.thirsty;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -73,6 +74,8 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
                 WelcomeScreen.sourceDB.setValue(WelcomeScreen.activeSourceReportList.getReportList());
                 Intent i = new Intent(SubmitWaterSourceReport.this, WelcomeScreenLoggedIn.class);
                 i.putExtra("Username", user);
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.WaterDrop);
+                mp.start();
                 startActivity(i);
             } else {
                 Toast.makeText(this, "Please insert a longitude/latitude", Toast.LENGTH_SHORT).show();
@@ -91,6 +94,8 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
             WelcomeScreen.sourceDB.setValue(WelcomeScreen.activeSourceReportList.getReportList());
             Intent i = new Intent(SubmitWaterSourceReport.this, WelcomeScreenLoggedIn.class);
             i.putExtra("Username", user);
+            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.WaterDrop);
+            mp.start();
             startActivity(i);
 
         }

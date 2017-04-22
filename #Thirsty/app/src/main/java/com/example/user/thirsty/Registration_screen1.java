@@ -1,6 +1,7 @@
 package com.example.user.thirsty;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -96,6 +97,8 @@ public class Registration_screen1 extends AppCompatActivity {
                         accountCreated.show();
 
                         Intent i = new Intent(Registration_screen1.this, WelcomeScreen.class);
+                        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.WaterDrop);
+                        mp.start();
                         startActivity(i);
                     }
                 }
