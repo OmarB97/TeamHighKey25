@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -48,14 +47,14 @@ public class Login extends AppCompatActivity {
                         Intent i = new Intent(Login.this, WelcomeScreenLoggedInADMIN.class);
                         user = " " + user;
                         i.putExtra("Username", user);
-                        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.WaterDrop);
+                        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
                         mp.start();
                         startActivity(i);
                     } else {
                         Intent i = new Intent(Login.this, WelcomeScreenLoggedIn.class);
                         user = " " + user;
                         i.putExtra("Username", user);
-                        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.WaterDrop);
+                        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
                         mp.start();
                         startActivity(i);
                     }

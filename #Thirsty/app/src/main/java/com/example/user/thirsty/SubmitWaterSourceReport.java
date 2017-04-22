@@ -74,7 +74,7 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
                 WelcomeScreen.sourceDB.setValue(WelcomeScreen.activeSourceReportList.getReportList());
                 Intent i = new Intent(SubmitWaterSourceReport.this, WelcomeScreenLoggedIn.class);
                 i.putExtra("Username", user);
-                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.WaterDrop);
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
                 mp.start();
                 startActivity(i);
             } else {
@@ -94,7 +94,7 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
             WelcomeScreen.sourceDB.setValue(WelcomeScreen.activeSourceReportList.getReportList());
             Intent i = new Intent(SubmitWaterSourceReport.this, WelcomeScreenLoggedIn.class);
             i.putExtra("Username", user);
-            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.WaterDrop);
+            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
             mp.start();
             startActivity(i);
 
