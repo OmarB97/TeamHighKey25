@@ -49,5 +49,8 @@ public abstract class UserProfile {
     abstract boolean getAccountStatus();
 
     abstract void setAccountStatus(boolean status);
+    abstract int getCounter();
+    abstract void increaseCounter();
+    abstract void clearCounter();
 
 }

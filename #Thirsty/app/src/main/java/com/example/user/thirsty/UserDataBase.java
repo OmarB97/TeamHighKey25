@@ -143,6 +143,16 @@ public class UserDataBase {
         }
     }
 
+    public static int returnCounter(String username) {
+        return userDataBase.get(username).getCounter();
+    }
+    public static void addCounter(String username) {
+        userDataBase.get(username).increaseCounter();
+    }
+    public static void zeroCounter(String username) {
+        userDataBase.get(username).clearCounter();
+    }
+
     public static boolean getAccountStatus(String username) {
         if (userDataBase.containsKey(username)) {
             return userDataBase.get(username).getAccountStatus();

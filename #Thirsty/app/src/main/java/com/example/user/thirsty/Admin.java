@@ -12,6 +12,7 @@ public class Admin extends UserProfile {
     private String userType;
     private String salt;
     private boolean isBanned = false;
+    private int counter = 0;
 
     /**
      *Constructor for an admin object. Takes in an email, a password, and a user type and assigns
@@ -46,6 +47,17 @@ public class Admin extends UserProfile {
     public String getEmail() {
         return email;
     }
+    public int getCounter() {
+        return counter;
+    }
+
+    public void increaseCounter() {
+        counter = counter +1;
+    }
+    public void clearCounter() {
+        counter = 0;
+    }
+
 
     /**
      *Returns the user type

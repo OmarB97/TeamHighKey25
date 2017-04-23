@@ -44,6 +44,8 @@ public class Login extends AppCompatActivity {
             if (WelcomeScreen.users.getUser(user) && WelcomeScreen.users.getPassword(user, pass)) {
                 Log.writeLogEvent("Login Event", user);
                 if (!WelcomeScreen.users.getAccountStatus(user)) {
+                    //resets counter to zero
+                    WelcomeScreen.users.zeroCounter(user);
                     if (WelcomeScreen.users.getUserType(user).equals("Admin")) {
                         Intent i = new Intent(Login.this, WelcomeScreenLoggedInADMIN.class);
                         user = " " + user;
@@ -66,6 +68,17 @@ public class Login extends AppCompatActivity {
                 }
             } else {
                 Intent i = new Intent(Login.this, Bad_login.class);
+                //banning if 3 times
+                if (WelcomeScreen.users.getUser(user)) {
+                    if (WelcomeScreen.users.returnCounter(user) == 2) {
+                        //is banned
+                        Toast accountBan = Toast.makeText(Login.this,
+                                "This account has been banned for incorrect password 3 times, please contact an Administrator", Toast.LENGTH_SHORT);
+                        accountBan.show();
+                    } else {
+                        WelcomeScreen.users.addCounter(user);
+                    }
+                }
                 startActivity(i);
             }
 

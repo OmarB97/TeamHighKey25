@@ -13,6 +13,7 @@ public class User extends UserProfile{
     private String userType;
     private String salt;
     private boolean isBanned;
+    private int counter = 0;
 
     /**
      *Constructor for an user object. Takes in an email, a password, and a user type and assigns
@@ -28,6 +29,17 @@ public class User extends UserProfile{
         this.userType = userType;
         this.salt = salt;
         this.isBanned = accStatus;
+        this.counter = 0;
+    }
+    public int getCounter() {
+        return counter;
+    }
+
+    public void increaseCounter() {
+        counter = counter +1;
+    }
+    public void clearCounter() {
+        counter = 0;
     }
 
     /**
