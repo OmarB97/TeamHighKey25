@@ -43,6 +43,12 @@ public class Registration_screen1 extends AppCompatActivity {
      * @param view registration_screen1 view
      */
     public void onButtonClick(View view) {
+        if (view.getId() == R.id.picture_button) {
+            Intent i = new Intent(Registration_screen1.this, ProfilePicture.class);
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+        }
+
         if (view.getId() == R.id.register_button1) {
             EditText userPrep = (EditText) findViewById(R.id.username_TF);
             String user = userPrep.getText().toString();

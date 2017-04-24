@@ -12,6 +12,10 @@
     android:background="#FFFFFF"
     tools:context="com.example.user.thirsty.Registration_screen1">
 
+
+
+
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -113,10 +117,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/register_button1"
         android:onClick="onButtonClick"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:background="@color/seaGreen"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignTop="@+id/picture_button"
+        android:layout_toStartOf="@+id/picture_button"
+        android:layout_marginEnd="39dp"
+        android:layout_marginTop="11dp" />
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
@@ -126,4 +132,18 @@
         app:srcCompat="@drawable/mini_logo"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/picture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/seaGreen"
+        android:onClick="onButtonClick"
+        android:text="Profile Picture"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginEnd="46dp"
+        android:layout_below="@+id/spinner"
+        android:layout_alignEnd="@+id/spinner"
+        android:layout_marginTop="25dp" />
+
 </RelativeLayout>
