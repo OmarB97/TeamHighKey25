@@ -16,9 +16,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/custom_logo"
-        android:layout_marginTop="53dp"
         android:id="@+id/imageView2"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/view_profile"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -30,7 +29,9 @@
         android:layout_alignStart="@+id/submit_report"
         android:layout_below="@+id/view_map"
         android:layout_alignEnd="@+id/submit_report"
-        android:onClick="onButtonClick" />
+        android:onClick="onButtonClick"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"/>
 
     <Button
         android:id="@+id/view_map"
@@ -38,7 +39,11 @@
         android:layout_height="wrap_content"
         android:text="@string/viewMap"
         android:onClick="onButtonClick"
-        android:layout_above="@+id/view_report" />
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_above="@+id/view_report"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp" />
 
     <Button
         android:text="@string/viewReport"
@@ -47,7 +52,9 @@
         android:id="@+id/view_report"
         android:onClick="onButtonClick"
         android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/view_map" />
+        android:layout_alignEnd="@+id/view_map"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"/>
 
     <Button
         android:text="@string/submitReport"
@@ -55,7 +62,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/submit_report"
         android:onClick="onButtonClick"
-        android:layout_above="@+id/submit_purity_report"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignBaseline="@+id/view_map"
+        android:layout_alignBottom="@+id/view_map"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -65,26 +75,33 @@
         android:id="@+id/view_profile"
         android:onClick="onButtonClick"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"/>
 
     <Button
         android:text="View Purity Reports"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/view_purity_report"
-        android:layout_above="@+id/view_map"
-        android:layout_alignEnd="@+id/submit_report"
+        android:onClick="onButtonClick"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/imageView2"
         android:layout_alignStart="@+id/submit_report"
-        android:onClick="onButtonClick" />
+        android:layout_alignEnd="@+id/submit_report" />
 
     <Button
         android:id="@+id/history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/view_purity_report"
         android:onClick="onButtonClick"
-        android:text="History" />
+        android:text="History"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignBaseline="@+id/submit_report"
+        android:layout_alignBottom="@+id/submit_report"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:id="@+id/user_button"
@@ -93,5 +110,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:onClick="onButtonClick"
-        android:text="Users" />
+        android:text="Users"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"/>
 </RelativeLayout>

@@ -25,7 +25,9 @@
         android:layout_height="48dp"
         android:text="View"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="418dp" />
+        tools:layout_editor_absoluteY="418dp"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"/>
 
     <EditText
         android:id="@+id/yearText"

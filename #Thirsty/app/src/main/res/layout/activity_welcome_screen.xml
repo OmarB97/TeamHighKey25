@@ -20,7 +20,10 @@
         android:layout_marginStart="48dp"
         android:layout_marginBottom="95dp"
         android:id="@+id/login_button"
-        android:onClick="onButtonClick" />
+        android:onClick="onButtonClick"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"
+        />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -39,5 +42,7 @@
         android:layout_alignEnd="@+id/imageView"
         android:layout_marginEnd="18dp"
         android:id="@+id/button"
-        android:onClick="onButtonClick" />
+        android:onClick="onButtonClick"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"/>
 </RelativeLayout>

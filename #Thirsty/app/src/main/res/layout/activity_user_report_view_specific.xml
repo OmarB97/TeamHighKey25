@@ -112,6 +112,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="14dp"
         android:onClick="onButtonClick"
-        android:text="Delete Report" />
+        android:text="Delete Report"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"/>
 
 </RelativeLayout>

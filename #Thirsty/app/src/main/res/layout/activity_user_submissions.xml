@@ -51,7 +51,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
             android:onClick="onButtonClick"
-            android:text="View Submissions" />
+            android:text="View Submissions"
+            android:background="@color/seaGreen"
+            android:textColor="@color/colorPrimaryDark"/>
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

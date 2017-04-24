@@ -125,5 +125,7 @@
         android:layout_height="wrap_content"
         android:text="Delete Report"
         android:layout_above="@+id/imageView5"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"/>
 </RelativeLayout>

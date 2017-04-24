@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:id="@+id/activity_water_purity_report"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -110,7 +112,9 @@
         android:onClick="onButtonClick"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp" />
+        android:layout_marginEnd="20dp"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"/>
 
     <Button
         android:id="@+id/autoPurity"
@@ -120,5 +124,16 @@
         android:layout_alignStart="@+id/textvie18"
         android:layout_marginStart="33dp"
         android:onClick="onButtonClick"
-        android:text="AutoSubmit" />
+        android:text="AutoSubmit"
+        android:background="@color/seaGreen"
+        android:textColor="@color/colorPrimaryDark"/>
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        app:srcCompat="@drawable/mini_logo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

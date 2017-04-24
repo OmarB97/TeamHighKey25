@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.user.thirsty.HistoryInput">
@@ -55,7 +55,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="85dp"
             android:onClick="onButtonClick"
-            android:text="View" />
+            android:text="View"
+            android:background="@color/seaGreen"
+            android:textColor="@color/colorPrimaryDark"/>
 
         <EditText
             android:id="@+id/latitudeText"
@@ -78,5 +80,14 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="longitude" />
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/mini_logo"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
