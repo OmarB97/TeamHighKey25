@@ -137,6 +137,11 @@ public class WelcomeScreen extends AppCompatActivity {
             Intent i = new Intent(WelcomeScreen.this, Registration_screen1.class);
             startActivity(i);
         }
+
+        if (view.getId() == R.id.forgot_password) {
+            Intent i = new Intent(WelcomeScreen.this, ForgotPassword.class);
+            startActivity(i);
+        }
     }
 
     @Override

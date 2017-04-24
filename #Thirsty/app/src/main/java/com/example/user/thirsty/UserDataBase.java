@@ -233,4 +233,8 @@ public class UserDataBase {
         userDataBase = database;
     }
 
+    public static String getEmail(String username) {
+        return userDataBase.get(username).getEmail();
+    }
+
 }

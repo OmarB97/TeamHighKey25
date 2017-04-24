@@ -13,18 +13,28 @@
     tools:context="com.example.user.thirsty.WelcomeScreen">
 
     <Button
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:background="@color/seaGreen"
+        android:onClick="onButtonClick"
+        android:text="Forgot Password"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
         android:text="@string/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="95dp"
         android:id="@+id/login_button"
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        />
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginTop="21dp" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -39,13 +49,12 @@
         android:text="@string/register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/login_button"
-        android:layout_alignEnd="@+id/imageView"
-        android:layout_marginEnd="18dp"
         android:id="@+id/button"
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignTop="@+id/login_button"
+        android:layout_toEndOf="@+id/forgot_password" />
 
 
 </RelativeLayout>

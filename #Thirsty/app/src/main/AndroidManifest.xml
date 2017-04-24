@@ -17,7 +17,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -67,7 +66,9 @@
             android:label="@string/title_activity_history_input"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Admin_Console" />
-        <activity android:name=".UserSubmissions"></activity>
+        <activity android:name=".UserSubmissions" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".PasswordRecovery"></activity>
     </application>
 
 </manifest>

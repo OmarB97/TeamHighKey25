@@ -119,10 +119,8 @@
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_alignTop="@+id/picture_button"
-        android:layout_toStartOf="@+id/picture_button"
-        android:layout_marginEnd="39dp"
-        android:layout_marginTop="11dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
@@ -141,9 +139,7 @@
         android:onClick="onButtonClick"
         android:text="Profile Picture"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginEnd="46dp"
-        android:layout_below="@+id/spinner"
-        android:layout_alignEnd="@+id/spinner"
-        android:layout_marginTop="25dp" />
+        android:layout_alignBottom="@+id/email_TF"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

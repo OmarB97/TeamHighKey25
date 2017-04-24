@@ -51,7 +51,7 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
      * @param view submit_water_source_report view
      */
     public void onButtonClick(View view) {
-        if (view.getId() == R.id.submit) {
+        if (view.getId() == R.id.submitReq) {
             EditText latitudePrep = (EditText) findViewById(R.id.latitude_field);
             EditText longitudePrep = (EditText) findViewById(R.id.longitude_field);
             String latitude = latitudePrep.getText().toString();
