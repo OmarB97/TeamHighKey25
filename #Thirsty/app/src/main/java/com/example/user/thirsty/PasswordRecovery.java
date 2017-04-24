@@ -27,10 +27,14 @@ public class PasswordRecovery extends AppCompatActivity {
         setContentView(R.layout.activity_password_recovery);
         String user = getIntent().getStringExtra("Username");
 
-
-        SendEmail.send("theofficialthirstyapp@gmail.com","emailpassword2340", WelcomeScreen.users.getEmail(user) ,
+        SendEmail.send("theofficialthirstyapp@gmail.com","emailpassword2340",  "dedding4341@gmail.com",
                 "Password Recovery Request", "Hello, you have requested a password change. " +
-                        "Please enter the following code in order to change your password: " + recoveryString);
+                        "Please enter the following code in order to change your password: " + "98989A");
+
+
+        /*SendEmail.send("theofficialthirstyapp@gmail.com","emailpassword2340", WelcomeScreen.users.getEmail(user) ,
+                "Password Recovery Request", "Hello, you have requested a password change. " +
+                        "Please enter the following code in order to change your password: " + recoveryString);*/
 
     }
 

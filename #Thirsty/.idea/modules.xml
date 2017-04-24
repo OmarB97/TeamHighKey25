@@ -3,10 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/#Thirsty.iml" filepath="$PROJECT_DIR$/#Thirsty.iml" />
-      <module fileurl="file://$PROJECT_DIR$/activation/activation.iml" filepath="$PROJECT_DIR$/activation/activation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/backend.iml" filepath="$PROJECT_DIR$/backend/backend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mail/mail.iml" filepath="$PROJECT_DIR$/mail/mail.iml" />
     </modules>
   </component>
 </project>
