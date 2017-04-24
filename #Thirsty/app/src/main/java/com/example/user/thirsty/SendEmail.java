@@ -29,7 +29,7 @@ class SendEmail{
         //compose message
         try {
 
-            MimeMessage message = new MimeMessage(session);
+            Message message = new MimeMessage(session);
             message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
             message.setSubject(sub);
             message.setText(msg);
