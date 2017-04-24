@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.thirsty.Admin_Console"
     tools:layout_editor_absoluteY="81dp"
+    android:background="#FFFFFF"
     tools:layout_editor_absoluteX="0dp">
+
 
     <Button
         android:id="@+id/unban"
