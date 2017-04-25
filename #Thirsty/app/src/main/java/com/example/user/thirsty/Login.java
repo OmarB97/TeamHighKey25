@@ -53,6 +53,7 @@ public class Login extends AppCompatActivity {
                         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
                         mp.start();
                         startActivity(i);
+                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                     } else {
                         Intent i = new Intent(Login.this, WelcomeScreenLoggedIn.class);
                         user = " " + user;
@@ -60,6 +61,7 @@ public class Login extends AppCompatActivity {
                         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
                         mp.start();
                         startActivity(i);
+                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                     }
                 } else {
                     Toast accountBan = Toast.makeText(Login.this,

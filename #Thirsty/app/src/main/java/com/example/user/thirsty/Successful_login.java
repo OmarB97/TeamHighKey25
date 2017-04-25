@@ -39,18 +39,21 @@ public class Successful_login extends AppCompatActivity {
         if (view.getId() == R.id.logout) {
             Intent i = new Intent(Successful_login.this, WelcomeScreen.class);
             startActivity(i);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
 
         if (view.getId() == R.id.edit_email) {
             Intent i = new Intent(Successful_login.this, Update_email.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
 
         if (view.getId() == R.id.edit_password) {
             Intent i = new Intent(Successful_login.this, Update_password.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         }
 
         if (view.getId() == R.id.return_home) {
@@ -58,10 +61,12 @@ public class Successful_login extends AppCompatActivity {
                 Intent i = new Intent(Successful_login.this, WelcomeScreenLoggedInADMIN.class);
                 i.putExtra("Username", getIntent().getStringExtra("Username"));
                 startActivity(i);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
             } else {
                 Intent i = new Intent(Successful_login.this, WelcomeScreenLoggedIn.class);
                 i.putExtra("Username", getIntent().getStringExtra("Username"));
                 startActivity(i);
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
             }
         }
     }

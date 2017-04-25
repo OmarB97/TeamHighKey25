@@ -107,6 +107,7 @@ public class SubmitWaterPurityReport extends AppCompatActivity {
                     mp.start();
                     Log.writeLogEvent("Purity Submission Event", user);
                     startActivity(i);
+                    overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 } else {
                     Toast.makeText(this, "Please insert a location or virus/contaminant PPM", Toast.LENGTH_SHORT).show();
                 }

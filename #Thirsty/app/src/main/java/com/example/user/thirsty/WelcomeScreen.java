@@ -132,15 +132,18 @@ public class WelcomeScreen extends AppCompatActivity {
         if (view.getId() == R.id.login_button) {
             Intent i = new Intent(WelcomeScreen.this, Login.class);
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
         if (view.getId() == R.id.button) {
             Intent i = new Intent(WelcomeScreen.this, Registration_screen1.class);
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
         if (view.getId() == R.id.forgot_password) {
             Intent i = new Intent(WelcomeScreen.this, ForgotPassword.class);
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
     }
 

@@ -32,6 +32,7 @@ public class Admin_Console extends AppCompatActivity {
                     WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
                     Log.writeLogEvent("Unban User Event", user);
                     startActivity(i);
+                    overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 
                 } else {
                     Toast accountNotBanned = Toast.makeText(Admin_Console.this,
@@ -60,6 +61,7 @@ public class Admin_Console extends AppCompatActivity {
                     WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
                     Log.writeLogEvent("Ban User Event", user);
                     startActivity(i);
+                    overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 } else {
                     Toast accountNotBanned = Toast.makeText(Admin_Console.this,
                             "This account is currently banned", Toast.LENGTH_SHORT);
