@@ -10,12 +10,17 @@ import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
+/**
+ * @author Erika Trejo
+ */
 
 public class ProfilePicture extends AppCompatActivity {
     Button buttonLoadPicture;
@@ -51,6 +56,11 @@ public class ProfilePicture extends AppCompatActivity {
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                 imgView.setImageBitmap(bitmap);
+                ByteArrayOutputStream bYtE = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, bYtE);
+                bitmap.recycle();
+                byte[] byteArray = bYtE.toByteArray();
+                String encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
             } catch (IOException e) {
                 e.getMessage();
             }
