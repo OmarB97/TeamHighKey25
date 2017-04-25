@@ -51,10 +51,16 @@ public class ProfilePicture extends AppCompatActivity {
 
     public void onButtonClick(View view) {
         if (view.getId() == R.id.buttonSelect) {
-            WelcomeScreen.rootReference.child("Picture Database").child(getIntent().getStringExtra("Username")).setValue(encodedImage);
+            WelcomeScreen.users.setPicCode(getIntent().getStringExtra("Username").substring(1), encodedImage);
             Toast picturePopUp = Toast.makeText(ProfilePicture.this,
-                    "Picture Uploaded! Please back out to finish registration", Toast.LENGTH_SHORT);
+                    "Picture Uploaded!", Toast.LENGTH_SHORT);
             picturePopUp.show();
+            WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
+            Intent i = new Intent(ProfilePicture.this, Successful_login.class);
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
 
         }
     }

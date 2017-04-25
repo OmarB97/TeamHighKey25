@@ -23,12 +23,13 @@ public class Admin extends UserProfile {
      * @param password the password for the Admin object
      * @param userType the userType for the Admin object
      */
-    public Admin(String email, String password, String userType, String salt, boolean accStatus) {
+    public Admin(String email, String password, String userType, String salt, boolean accStatus, String picCode) {
         this.password = password;
         this.email = email;
         this.userType = userType;
         this.salt = salt;
         this.isBanned = accStatus;
+        this.encoded = picCode;
     }
 
     /**

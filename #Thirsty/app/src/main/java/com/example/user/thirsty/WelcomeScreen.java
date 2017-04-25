@@ -53,8 +53,9 @@ public class WelcomeScreen extends AppCompatActivity {
                     String salt = (String) userSnapShot.child("salt").getValue();
                     String pass = (String) userSnapShot.child("password").getValue();
                     String email = (String) userSnapShot.child("email").getValue();
+                    String picCode = (String) userSnapShot.child("profilePic").getValue();
                     boolean accStatus = (boolean) userSnapShot.child("accountStatus").getValue();
-                    users.createUser(userName, pass, email, userType, salt, accStatus);
+                    users.createUser(userName, pass, email, userType, salt, accStatus, picCode);
                 }
                 //Log.d("val", users.ge))
                 //Log.d(TAG, "Value is: " + value);

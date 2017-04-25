@@ -31,11 +31,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/edit_email"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="53dp"
         android:id="@+id/user_info"
-        android:text="@string/userInfo" />
+        android:text="@string/userInfo"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/TVusername"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="@string/updateEmail"
@@ -45,10 +45,10 @@
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
+        android:layout_marginStart="22dp"
         android:layout_alignBaseline="@+id/edit_password"
         android:layout_alignBottom="@+id/edit_password"
-        android:layout_toEndOf="@+id/user_info"
-        android:layout_marginStart="11dp" />
+        android:layout_toEndOf="@+id/user_info" />
 
     <Button
         android:text="@string/updatePass"
@@ -58,8 +58,8 @@
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginBottom="12dp"
-        android:layout_above="@+id/return_home"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/return_home"
         android:layout_toStartOf="@+id/user_info" />
 
     <Button
@@ -71,8 +71,10 @@
         android:visibility="visible"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="85dp"
+        android:layout_below="@+id/profile_picture"
+        android:layout_alignEnd="@+id/profile_picture"
+        android:layout_marginEnd="23dp" />
 
     <Button
         android:text="@string/home"
@@ -82,18 +84,18 @@
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_above="@+id/logout"
-        android:layout_alignStart="@+id/logout"
-        android:layout_marginBottom="13dp" />
+        android:layout_alignBaseline="@+id/logout"
+        android:layout_alignBottom="@+id/logout"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:id="@+id/profile_picture"
         android:layout_width="160dp"
         android:layout_height="160dp"
         app:srcCompat="@android:drawable/screen_background_dark"
-        android:layout_above="@+id/user_info"
+        android:layout_alignTop="@+id/user_info"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="19dp" />
+        android:layout_marginTop="44dp" />
     <Button
         android:id="@+id/picture_button"
         android:layout_width="wrap_content"
@@ -102,7 +104,9 @@
         android:onClick="onButtonClick"
         android:text="Profile Picture"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_alignTop="@+id/user_info"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBaseline="@+id/logout"
+        android:layout_alignBottom="@+id/logout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="6dp" />
 
 </RelativeLayout>

@@ -39,25 +39,16 @@ public class Successful_login extends AppCompatActivity {
         TextView displayInfo = (TextView) findViewById(R.id.user_info);
         displayInfo.setText(userInfo);
 
-        String aString;
+        if ((WelcomeScreen.users.getPicCode(username.substring(1)).equals("stock"))) {
 
+            //Do nuthin
+        } else {
+            byte[] decodedString = Base64.decode(WelcomeScreen.users.getPicCode(username.substring(1)), Base64.DEFAULT);
+            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
 
-        WelcomeScreen.rootReference.child("Picture Database").child(username).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                byte[] decodedString = Base64.decode((String) dataSnapshot.getValue(), Base64.DEFAULT);
-                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-
-                ImageView picture = (ImageView) findViewById(R.id.profile_picture);
-                picture.setImageBitmap(decodedByte);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
+            ImageView picture = (ImageView) findViewById(R.id.profile_picture);
+            picture.setImageBitmap(decodedByte);
+        }
 
     }
 
@@ -70,11 +61,10 @@ public class Successful_login extends AppCompatActivity {
      */
     public void onButtonClick(View view) {
         if (view.getId() == R.id.picture_button) {
-            EditText userPrep = (EditText) findViewById(R.id.username_TF);
-            String user = userPrep.getText().toString();
+
 
             Intent i = new Intent(Successful_login.this, ProfilePicture.class);
-            i.putExtra("Username", user);
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }

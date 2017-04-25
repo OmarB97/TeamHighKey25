@@ -93,7 +93,7 @@ public class Registration_screen1 extends AppCompatActivity {
                     } else {
                         String uniqueSalt = UserDataBase.SaltShaker();
                         pass = pass + uniqueSalt;
-                        WelcomeScreen.users.createUser(user, UserDataBase.MD5(pass), email, userType, uniqueSalt, false);
+                        WelcomeScreen.users.createUser(user, UserDataBase.MD5(pass), email, userType, uniqueSalt, false, "stock");
                         Toast accountCreated = Toast.makeText(Registration_screen1.this,
                                 "Account successfully created!", Toast.LENGTH_SHORT);
                         accountCreated.show();

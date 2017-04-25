@@ -24,13 +24,14 @@ public class User extends UserProfile{
      * @param password the password for the User object
      * @param userType the userType for the User object
      */
-    public User(String email, String password, String userType, String salt, boolean accStatus) {
+    public User(String email, String password, String userType, String salt, boolean accStatus, String picCode) {
         this.password = password;
         this.email = email;
         this.userType = userType;
         this.salt = salt;
         this.isBanned = accStatus;
         this.counter = 0;
+        this.encoded = picCode;
     }
     public int getCounter() {
         return counter;

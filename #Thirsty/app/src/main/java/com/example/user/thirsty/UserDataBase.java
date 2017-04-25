@@ -39,18 +39,18 @@ public class UserDataBase {
      * @param email the email for the User/Admin to be created
      * @param userType the user type for the User/Admin to be created
      */
-    public static void createUser(String username, String password, String email, String userType, String uniqueSalt, boolean accStatus) {
+    public static void createUser(String username, String password, String email, String userType, String uniqueSalt, boolean accStatus, String picCode) {
 
         UserProfile profile;
 
         if (userType.equals("User")) {
-            profile = new User(email, password, userType, uniqueSalt, accStatus);
+            profile = new User(email, password, userType, uniqueSalt, accStatus, picCode);
         } else if (userType.equals("Worker")) {
-            profile = new User(email, password, userType, uniqueSalt, accStatus);
+            profile = new User(email, password, userType, uniqueSalt, accStatus, picCode);
         } else if (userType.equals("Manager")) {
-            profile = new User(email, password, userType, uniqueSalt, accStatus);
+            profile = new User(email, password, userType, uniqueSalt, accStatus, picCode);
         } else {
-            profile = new Admin(email, password, userType, uniqueSalt, accStatus);
+            profile = new Admin(email, password, userType, uniqueSalt, accStatus, picCode);
         }
 
         userDataBase.put(username, profile);
