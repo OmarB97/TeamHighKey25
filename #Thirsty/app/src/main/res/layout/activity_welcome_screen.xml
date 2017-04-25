@@ -16,13 +16,12 @@
         android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
         android:background="@color/seaGreen"
         android:onClick="onButtonClick"
         android:text="Forgot Password"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="@string/login_button"
@@ -33,8 +32,7 @@
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
         android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="21dp" />
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -53,8 +51,9 @@
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_alignTop="@+id/login_button"
-        android:layout_toEndOf="@+id/forgot_password" />
+        android:layout_below="@+id/login_button"
+        android:layout_alignStart="@+id/login_button"
+        android:layout_marginTop="12dp" />
 
 
 </RelativeLayout>

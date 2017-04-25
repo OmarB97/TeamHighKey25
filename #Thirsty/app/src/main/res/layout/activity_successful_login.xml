@@ -38,6 +38,18 @@
         android:layout_centerHorizontal="true" />
 
     <Button
+        android:id="@+id/picture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/seaGreen"
+        android:onClick="onButtonClick"
+        android:text="Profile Picture"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignBaseline="@+id/return_home"
+        android:layout_alignBottom="@+id/return_home"
+        android:layout_alignParentStart="true" />
+
+    <Button
         android:text="@string/updateEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,10 +57,9 @@
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginStart="22dp"
-        android:layout_alignBaseline="@+id/edit_password"
-        android:layout_alignBottom="@+id/edit_password"
-        android:layout_toEndOf="@+id/user_info" />
+        android:layout_below="@+id/return_home"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="23dp" />
 
     <Button
         android:text="@string/updatePass"
@@ -58,9 +69,9 @@
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="18dp"
-        android:layout_below="@+id/return_home"
-        android:layout_toStartOf="@+id/user_info" />
+        android:layout_alignBaseline="@+id/edit_email"
+        android:layout_alignBottom="@+id/edit_email"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="@string/logout"
@@ -71,10 +82,9 @@
         android:visibility="visible"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="85dp"
-        android:layout_below="@+id/profile_picture"
-        android:layout_alignEnd="@+id/profile_picture"
-        android:layout_marginEnd="23dp" />
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/edit_password" />
 
     <Button
         android:text="@string/home"
@@ -84,9 +94,9 @@
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_alignBaseline="@+id/logout"
-        android:layout_alignBottom="@+id/logout"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/profile_picture"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp" />
 
     <ImageView
         android:id="@+id/profile_picture"
@@ -96,17 +106,5 @@
         android:layout_alignTop="@+id/user_info"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp" />
-    <Button
-        android:id="@+id/picture_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/seaGreen"
-        android:onClick="onButtonClick"
-        android:text="Profile Picture"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_alignBaseline="@+id/logout"
-        android:layout_alignBottom="@+id/logout"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="6dp" />
 
 </RelativeLayout>
