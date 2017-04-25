@@ -84,6 +84,7 @@ public class PurityReportView extends AppCompatActivity {
                 Intent i = new Intent(PurityReportView.this, PurityReportViewSpecific.class);
                 i.putExtra("RepNumber", position);
                 startActivity(i);
+
             }
         });
     }

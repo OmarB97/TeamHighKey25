@@ -32,12 +32,12 @@ public class Bad_login extends AppCompatActivity {
         if (view.getId() == R.id.try_again) {
             Intent i = new Intent(Bad_login.this, Login.class);
             startActivity(i);
-            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
         if (view.getId() == R.id.register_button) {
             Intent i = new Intent(Bad_login.this, Registration_screen1.class);
             startActivity(i);
-            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
     }
 }

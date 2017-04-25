@@ -45,11 +45,13 @@ public class PasswordRecovery extends AppCompatActivity {
             Intent i = new Intent(PasswordRecovery.this, Update_password.class);
             i.putExtra("Username", " " + getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
         } else {
             Toast codeWrong = Toast.makeText(PasswordRecovery.this,
                     "This is not the correct recovery code, please try again", Toast.LENGTH_SHORT);
             codeWrong.show();
+
         }
 
     }

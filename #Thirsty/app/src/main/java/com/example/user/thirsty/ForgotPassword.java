@@ -28,7 +28,7 @@ public class ForgotPassword extends AppCompatActivity {
                     MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
                     mp.start();
                     startActivity(i);
-                    overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
                 } else {
                     Toast accountBan = Toast.makeText(ForgotPassword.this,

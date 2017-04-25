@@ -56,7 +56,7 @@ public class Update_email extends AppCompatActivity {
                 emailPopUp.show();
                 WelcomeScreen.userDB.setValue(WelcomeScreen.users.getUserDataBase());
                 startActivity(i);
-                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
 
         }

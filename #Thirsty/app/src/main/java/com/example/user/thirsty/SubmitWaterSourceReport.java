@@ -78,7 +78,7 @@ public class SubmitWaterSourceReport extends AppCompatActivity {
                 mp.start();
                 Log.writeLogEvent("Source Submission Event", user);
                 startActivity(i);
-                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             } else {
                 Toast.makeText(this, "Please insert a longitude/latitude", Toast.LENGTH_SHORT).show();
             }

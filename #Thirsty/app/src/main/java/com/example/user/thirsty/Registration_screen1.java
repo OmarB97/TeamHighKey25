@@ -47,7 +47,7 @@ public class Registration_screen1 extends AppCompatActivity {
             Intent i = new Intent(Registration_screen1.this, ProfilePicture.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
-            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }
 
         if (view.getId() == R.id.register_button1) {
@@ -109,7 +109,7 @@ public class Registration_screen1 extends AppCompatActivity {
                         Log.writeLogEvent("Registration Event", user);
 
                         startActivity(i);
-                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     }
                 }
             }
