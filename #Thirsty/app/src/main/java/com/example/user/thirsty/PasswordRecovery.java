@@ -1,8 +1,11 @@
 package com.example.user.thirsty;
 
 import android.content.Intent;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.*;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,17 +27,14 @@ public class PasswordRecovery extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         setContentView(R.layout.activity_password_recovery);
         String user = getIntent().getStringExtra("Username");
 
-        SendEmail.send("theofficialthirstyapp@gmail.com","emailpassword2340",  "dedding4341@gmail.com",
+        SendEmail.send("theofficialthirstyapp@gmail.com","emailpassword2340", WelcomeScreen.users.getEmail(user) ,
                 "Password Recovery Request", "Hello, you have requested a password change. " +
-                        "Please enter the following code in order to change your password: " + "98989A");
-
-
-        /*SendEmail.send("theofficialthirstyapp@gmail.com","emailpassword2340", WelcomeScreen.users.getEmail(user) ,
-                "Password Recovery Request", "Hello, you have requested a password change. " +
-                        "Please enter the following code in order to change your password: " + recoveryString);*/
+                        "Please enter the following code in order to change your password: " + recoveryString);
 
     }
 
@@ -43,7 +43,7 @@ public class PasswordRecovery extends AppCompatActivity {
         String recover = recoverPrep.getText().toString();
         if (recoveryString.equals(recover)) {
             Intent i = new Intent(PasswordRecovery.this, Update_password.class);
-            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            i.putExtra("Username", " " + getIntent().getStringExtra("Username"));
             startActivity(i);
 
         } else {

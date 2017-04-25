@@ -53,10 +53,13 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:support-v4:25.1.1'
     testCompile 'junit:junit:4.12'
-    compile files('libs/activation.jar')
+    /*compile files('libs/activation.jar')
     compile files('libs/mail.jar')
     compile files('libs/activation.jar')
-    compile files('libs/mail.jar')
+    compile files('libs/mail.jar')*/
+    compile files('C:/Users/USER/Desktop/CS2340/TeamHighKey25/#Thirsty/libs/activation.jar')
+    compile files('C:/Users/USER/Desktop/CS2340/TeamHighKey25/#Thirsty/libs/additionnal.jar')
+    compile files('C:/Users/USER/Desktop/CS2340/TeamHighKey25/#Thirsty/libs/mail.jar')
 }
 
 
