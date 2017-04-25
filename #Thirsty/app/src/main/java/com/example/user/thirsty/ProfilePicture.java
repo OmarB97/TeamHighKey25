@@ -51,6 +51,7 @@ public class ProfilePicture extends AppCompatActivity {
     public void onButtonClick(View view) {
         if (view.getId() == R.id.buttonSelect) {
             WelcomeScreen.rootReference.child("Picture Database").child("Dennis").setValue(encodedImage);
+
         }
     }
 
@@ -65,7 +66,7 @@ public class ProfilePicture extends AppCompatActivity {
                 imgView.setImageBitmap(bitmap);
                 ByteArrayOutputStream bYtE = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, bYtE);
-                bitmap.recycle();
+                //bitmap.recycle();
                 byte[] byteArray = bYtE.toByteArray();
                 encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
             } catch (IOException e) {
