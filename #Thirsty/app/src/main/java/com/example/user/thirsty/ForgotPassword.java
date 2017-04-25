@@ -21,12 +21,13 @@ public class ForgotPassword extends AppCompatActivity {
             EditText userPrep = (EditText) findViewById(R.id.userName);
             String user = userPrep.getText().toString();
             if (WelcomeScreen.users.getUser(user)) {
-                Log.writeLogEvent("Password Recovery Event", user);
-                Intent i = new Intent(ForgotPassword.this, PasswordRecovery.class);
-                i.putExtra("Username", user);
-                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
-                mp.start();
-                startActivity(i);
+                if (!WelcomeScreen.users.getAccountStatus(user)) {
+                    Log.writeLogEvent("Password Recovery Event", user);
+                    Intent i = new Intent(ForgotPassword.this, PasswordRecovery.class);
+                    i.putExtra("Username", user);
+                    MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.water_drop);
+                    mp.start();
+                    startActivity(i);
 
                 } else {
                     Toast accountBan = Toast.makeText(ForgotPassword.this,
@@ -39,4 +40,5 @@ public class ForgotPassword extends AppCompatActivity {
                 accountDNE.show();
             }
         }
+    }
 }
