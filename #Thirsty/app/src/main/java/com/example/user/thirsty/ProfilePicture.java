@@ -14,6 +14,7 @@ import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -26,6 +27,7 @@ public class ProfilePicture extends AppCompatActivity {
     Button buttonLoadPicture;
     ImageView imgView;
     private int REQUEST_CODE = 1;
+    String encodedImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,16 @@ public class ProfilePicture extends AppCompatActivity {
         });
     }
 
+    public void onButtonClick(View view) {
+        if (view.getId() == R.id.buttonSelect) {
+            WelcomeScreen.rootReference.child("Picture Database").child(getIntent().getStringExtra("Username")).setValue(encodedImage);
+            Toast picturePopUp = Toast.makeText(ProfilePicture.this,
+                    "Picture Uploaded! Please back out to finish registration", Toast.LENGTH_SHORT);
+            picturePopUp.show();
+
+        }
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -58,9 +70,9 @@ public class ProfilePicture extends AppCompatActivity {
                 imgView.setImageBitmap(bitmap);
                 ByteArrayOutputStream bYtE = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, bYtE);
-                bitmap.recycle();
+                //bitmap.recycle();
                 byte[] byteArray = bYtE.toByteArray();
-                String encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
+                encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
             } catch (IOException e) {
                 e.getMessage();
             }
