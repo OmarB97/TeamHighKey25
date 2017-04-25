@@ -53,4 +53,7 @@ public abstract class UserProfile {
     abstract void increaseCounter();
     abstract void clearCounter();
 
+    abstract void setProfilePic(String code);
+    abstract String getProfilePic();
+
 }

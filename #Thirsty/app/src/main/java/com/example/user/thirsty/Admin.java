@@ -13,6 +13,7 @@ public class Admin extends UserProfile {
     private String salt;
     private boolean isBanned = false;
     private int counter = 0;
+    private String encoded;
 
     /**
      *Constructor for an admin object. Takes in an email, a password, and a user type and assigns
@@ -105,5 +106,13 @@ public class Admin extends UserProfile {
 
     public void setAccountStatus(boolean status) {
         isBanned = status;
+    }
+
+    public void setProfilePic(String code) {
+        this.encoded = code;
+    }
+
+    public String getProfilePic() {
+        return encoded;
     }
 }

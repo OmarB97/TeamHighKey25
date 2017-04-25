@@ -237,4 +237,12 @@ public class UserDataBase {
         return userDataBase.get(username).getEmail();
     }
 
+    public static String getPicCode(String username) {
+        return userDataBase.get(username).getProfilePic();
+    }
+
+    public static void setPicCode(String username, String code) {
+        userDataBase.get(username).setProfilePic(code);
+    }
+
 }
