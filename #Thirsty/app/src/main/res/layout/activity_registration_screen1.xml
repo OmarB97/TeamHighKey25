@@ -139,7 +139,7 @@
         android:onClick="onButtonClick"
         android:text="Profile Picture"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_alignBottom="@+id/email_TF"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignTop="@+id/confirmpass_TF"
+        android:layout_alignStart="@+id/imageView8" />
 
 </RelativeLayout>

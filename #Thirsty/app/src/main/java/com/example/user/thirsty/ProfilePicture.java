@@ -26,6 +26,7 @@ public class ProfilePicture extends AppCompatActivity {
     Button buttonLoadPicture;
     ImageView imgView;
     private int REQUEST_CODE = 1;
+    String encodedImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,12 @@ public class ProfilePicture extends AppCompatActivity {
         });
     }
 
+    public void onButtonClick(View view) {
+        if (view.getId() == R.id.buttonSelect) {
+            WelcomeScreen.rootReference.child("Picture Database").child("Dennis").setValue(encodedImage);
+        }
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -60,7 +67,7 @@ public class ProfilePicture extends AppCompatActivity {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, bYtE);
                 bitmap.recycle();
                 byte[] byteArray = bYtE.toByteArray();
-                String encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
+                encodedImage = Base64.encodeToString(byteArray, Base64.DEFAULT);
             } catch (IOException e) {
                 e.getMessage();
             }
