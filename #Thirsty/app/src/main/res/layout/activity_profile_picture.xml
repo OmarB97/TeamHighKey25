@@ -17,4 +17,13 @@
         android:layout_weight="0"
         android:onClick="onButtonClick"
         android:text="Load Picture"></Button>
+
+    <Button
+        android:id="@+id/buttonSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:onClick="onButtonClick"
+        android:text="Select"></Button>
 </LinearLayout>
