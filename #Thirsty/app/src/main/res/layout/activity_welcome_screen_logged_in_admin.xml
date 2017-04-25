@@ -13,6 +13,17 @@
     tools:context="com.example.user.thirsty.WelcomeScreenLoggedIn"
     android:onClick="onButtonClick">
 
+    <Button
+        android:id="@+id/user_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/seaGreen"
+        android:onClick="onButtonClick"
+        android:text="Users"
+        android:textColor="@color/colorPrimaryDark" />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -113,4 +124,5 @@
         android:text="Admin Console"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"/>
+
 </RelativeLayout>

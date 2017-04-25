@@ -40,6 +40,13 @@ public class WelcomeScreenLoggedInADMIN extends AppCompatActivity {
             overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
+        if (view.getId() == R.id.user_button2) {
+            Intent i = new Intent(WelcomeScreenLoggedInADMIN.this, UserSubmissions.class);
+            i.putExtra("Username", getIntent().getStringExtra("Username"));
+            startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
+        }
+
         if (view.getId() == R.id.view_profile) {
             Intent i = new Intent(WelcomeScreenLoggedInADMIN.this, Successful_login.class);
             //user = " " + user;

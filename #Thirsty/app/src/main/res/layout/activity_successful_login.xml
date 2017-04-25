@@ -45,9 +45,10 @@
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_above="@+id/edit_password"
-        android:layout_alignStart="@+id/return_home"
-        android:layout_marginBottom="10dp" />
+        android:layout_alignBaseline="@+id/edit_password"
+        android:layout_alignBottom="@+id/edit_password"
+        android:layout_toEndOf="@+id/user_info"
+        android:layout_marginStart="11dp" />
 
     <Button
         android:text="@string/updatePass"
@@ -57,9 +58,9 @@
         android:onClick="onButtonClick"
         android:background="@color/seaGreen"
         android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="12dp"
         android:layout_above="@+id/return_home"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp" />
+        android:layout_toStartOf="@+id/user_info" />
 
     <Button
         android:text="@string/logout"
@@ -89,8 +90,19 @@
         android:id="@+id/profile_picture"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_alignBottom="@+id/user_info"
+        app:srcCompat="@android:drawable/screen_background_dark"
+        android:layout_above="@+id/user_info"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@android:drawable/screen_background_dark" />
+        android:layout_marginBottom="19dp" />
+    <Button
+        android:id="@+id/picture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/seaGreen"
+        android:onClick="onButtonClick"
+        android:text="Profile Picture"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignTop="@+id/user_info"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

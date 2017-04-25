@@ -131,15 +131,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:id="@+id/picture_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/seaGreen"
-        android:onClick="onButtonClick"
-        android:text="Profile Picture"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_alignTop="@+id/confirmpass_TF"
-        android:layout_alignStart="@+id/imageView8" />
+
 
 </RelativeLayout>

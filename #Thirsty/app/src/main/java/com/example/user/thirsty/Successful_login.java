@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -68,6 +69,15 @@ public class Successful_login extends AppCompatActivity {
      * @param view successful_login view
      */
     public void onButtonClick(View view) {
+        if (view.getId() == R.id.picture_button) {
+            EditText userPrep = (EditText) findViewById(R.id.username_TF);
+            String user = userPrep.getText().toString();
+
+            Intent i = new Intent(Successful_login.this, ProfilePicture.class);
+            i.putExtra("Username", user);
+            startActivity(i);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        }
         if (view.getId() == R.id.logout) {
             Intent i = new Intent(Successful_login.this, WelcomeScreen.class);
             startActivity(i);
