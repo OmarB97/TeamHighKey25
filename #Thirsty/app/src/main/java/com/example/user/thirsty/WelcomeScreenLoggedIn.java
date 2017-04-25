@@ -22,7 +22,9 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_welcome_screen_logged_in);
 
 
@@ -46,12 +48,14 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
             Intent i = new Intent(WelcomeScreenLoggedIn.this, UserSubmissions.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
         if (view.getId() == R.id.history) {
             Intent i = new Intent(WelcomeScreenLoggedIn.this, HistoryInput.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
         if (view.getId() == R.id.view_profile) {
@@ -59,6 +63,7 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
             //user = " " + user;
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
         if (view.getId() == R.id.submit_report) {
@@ -66,6 +71,7 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
             //user = " " + user;
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
         if (view.getId() == R.id.submit_purity_report && (permissionLevel.equals("Worker") || permissionLevel.equals("Manager"))) {
@@ -73,6 +79,7 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
             //user = " " + user;
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         } else if (view.getId() == R.id.submit_purity_report) {
             Toast accessDenied = Toast.makeText(WelcomeScreenLoggedIn.this, "Your user account type does not allow you to submit a Purity Report", Toast.LENGTH_SHORT);
             accessDenied.show();
@@ -83,6 +90,7 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
             //user = " " + user;
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         } else if (view.getId() == R.id.view_purity_report) {
             Toast accessDenied2 = Toast.makeText(WelcomeScreenLoggedIn.this, "Your user account type does not allow you to view Purity Reports", Toast.LENGTH_SHORT);
             accessDenied2.show();
@@ -92,12 +100,14 @@ public class WelcomeScreenLoggedIn extends AppCompatActivity {
             Intent i = new Intent(WelcomeScreenLoggedIn.this, UserReportView.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
         if (view.getId() == R.id.view_map) {
             Intent i = new Intent(WelcomeScreenLoggedIn.this, MapsActivity.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
     }
 }

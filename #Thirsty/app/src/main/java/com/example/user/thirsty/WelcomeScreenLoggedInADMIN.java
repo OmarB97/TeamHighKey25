@@ -37,6 +37,7 @@ public class WelcomeScreenLoggedInADMIN extends AppCompatActivity {
             Intent i = new Intent(WelcomeScreenLoggedInADMIN.this, HistoryInput.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
         if (view.getId() == R.id.view_profile) {
@@ -51,6 +52,7 @@ public class WelcomeScreenLoggedInADMIN extends AppCompatActivity {
             //user = " " + user;
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
         if (view.getId() == R.id.submit_purity_report && (permissionLevel.equals("Worker") || permissionLevel.equals("Manager"))) {
@@ -58,6 +60,7 @@ public class WelcomeScreenLoggedInADMIN extends AppCompatActivity {
             //user = " " + user;
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         } else if (view.getId() == R.id.submit_purity_report) {
             Toast accessDenied = Toast.makeText(WelcomeScreenLoggedInADMIN.this, "Your user account type does not allow you to submit a Purity Report", Toast.LENGTH_SHORT);
             accessDenied.show();
@@ -68,6 +71,7 @@ public class WelcomeScreenLoggedInADMIN extends AppCompatActivity {
             //user = " " + user;
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         } else if (view.getId() == R.id.view_purity_report) {
             Toast accessDenied2 = Toast.makeText(WelcomeScreenLoggedInADMIN.this, "Your user account type does not allow you to view Purity Reports", Toast.LENGTH_SHORT);
             accessDenied2.show();
@@ -77,18 +81,21 @@ public class WelcomeScreenLoggedInADMIN extends AppCompatActivity {
             Intent i = new Intent(WelcomeScreenLoggedInADMIN.this, UserReportView.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
         if (view.getId() == R.id.view_map) {
             Intent i = new Intent(WelcomeScreenLoggedInADMIN.this, MapsActivity.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
 
         if (view.getId() == R.id.adminConsole) {
             Intent i = new Intent(WelcomeScreenLoggedInADMIN.this, Admin_Console.class);
             i.putExtra("Username", getIntent().getStringExtra("Username"));
             startActivity(i);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
         }
     }
 }
