@@ -14,6 +14,7 @@ import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -50,7 +51,10 @@ public class ProfilePicture extends AppCompatActivity {
 
     public void onButtonClick(View view) {
         if (view.getId() == R.id.buttonSelect) {
-            WelcomeScreen.rootReference.child("Picture Database").child("Dennis").setValue(encodedImage);
+            WelcomeScreen.rootReference.child("Picture Database").child(getIntent().getStringExtra("Username")).setValue(encodedImage);
+            Toast picturePopUp = Toast.makeText(ProfilePicture.this,
+                    "Picture Uploaded! Please back out to finish registration", Toast.LENGTH_SHORT);
+            picturePopUp.show();
 
         }
     }
